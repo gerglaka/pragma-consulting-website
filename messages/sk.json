@@ -31,7 +31,195 @@
     "rights": "Všetky práva vyhradené."
   },
   "home": {
-    "title": "Pragma",
-    "placeholder": "Webové stránky a systémy na mieru pre malé a stredné firmy."
+    "hero": {
+      "headline": "Webové stránky a systémy na mieru pre malé a stredné firmy.",
+      "subheadline": "Pragma navrhne a vytvorí webovú stránku a interné systémy pre vašu firmu — rýchlo, zrozumiteľne a v troch jazykoch. Dnes položíme vaše digitálne základy, zajtra zefektívnime vaše procesy.",
+      "ctaPrimary": "Nezáväzná ponuka",
+      "ctaSecondary": "Pozrite si naše referencie"
+    },
+    "services": {
+      "title": "S čím vám pomôžeme",
+      "websites": {
+        "title": "Webové stránky",
+        "description": "Rýchle, mobilné, viacjazyčné firemné weby, ktoré budujú dôveru a prinášajú zákazníkov."
+      },
+      "systems": {
+        "title": "Systémy na mieru",
+        "description": "Objednávkové systémy, evidencie, interné administratívne nástroje — jedno prehľadné rozhranie namiesto roztrúsených excelových tabuliek."
+      },
+      "webapps": {
+        "title": "Webové aplikácie",
+        "description": "Aplikácie dostupné z prehliadača, šité na mieru — fungujú presne tak, ako vaša firma."
+      },
+      "process": {
+        "badge": "Keď vaša firma rastie",
+        "title": "Zlepšovanie procesov a dashboardy",
+        "description": "Pomôžeme vám získať prehľad a zrýchliť fungovanie — procesnými mapami, Power BI reportmi a metodikou Lean Six Sigma."
+      },
+      "more": "Viac informácií"
+    },
+    "references": {
+      "title": "Skutočné projekty, skutočné výsledky",
+      "subtitle": "Každá naša referencia je reálna, dokončená práca.",
+      "cta": "Všetky referencie"
+    },
+    "how": {
+      "title": "Ako pracujeme",
+      "step1": {
+        "title": "Konzultácia",
+        "description": "Spoznáme vašu firmu a vaše ciele. Bezplatne a nezáväzne."
+      },
+      "step2": {
+        "title": "Ponuka",
+        "description": "Fixná cena, jasný rozsah, zrozumiteľný jazyk. Žiadne skryté náklady."
+      },
+      "step3": {
+        "title": "Realizácia",
+        "description": "Komunikujete priamo s tým, kto váš systém stavia — nie s obchodníkom."
+      },
+      "step4": {
+        "title": "Podpora",
+        "description": "Po odovzdaní nemizneme: údržba, ďalší rozvoj, poradenstvo."
+      },
+      "highlight": "Fixné ceny. Priama komunikácia. Po maďarsky, slovensky aj anglicky."
+    },
+    "finalCta": {
+      "title": "Povedzte nám, čo potrebujete.",
+      "description": "Napíšte nám pár slov o svojom projekte — pripravíme nezáväznú ponuku s fixnou cenou.",
+      "button": "Nezáväzná ponuka"
+    }
+  },
+  "servicesPage": {
+    "metaTitle": "Služby — Pragma",
+    "metaDescription": "Webové stránky, systémy na mieru a zlepšovanie procesov pre malé a stredné firmy — s ponukou s fixnou cenou.",
+    "title": "Služby",
+    "intro": "Nepredávame balíky — staviame riešenia. Každý projekt sa začína konzultáciou a pokračuje ponukou s fixnou cenou.",
+    "websites": {
+      "title": "Webové stránky",
+      "description": "Firemné weby, ktoré nielen dobre vyzerajú: rýchlo sa načítajú aj na mobile, hovoria k vašim zákazníkom vo viacerých jazykoch a dajú sa ľahko rozširovať. Cieľom je web, ktorý pre vás pracuje — buduje dôveru a prináša dopyty.",
+      "item1": "Firemné prezentačné stránky",
+      "item2": "Mobile-first dizajn, rýchle načítanie",
+      "item3": "Viacjazyčné riešenia (maďarčina, slovenčina, angličtina)",
+      "item4": "Štruktúra priateľská k vyhľadávačom"
+    },
+    "systems": {
+      "title": "Systémy na mieru",
+      "description": "Keď vaša firma prerastie tabuľky a papier, postavíme systém na mieru — presne podľa vašich procesov. Nič viac, nič menej.",
+      "item1": "Objednávkové a rezervačné systémy",
+      "item2": "Evidencie a nástroje na sledovanie",
+      "item3": "Interné administratívne rozhrania",
+      "item4": "Z excelovej tabuľky webová aplikácia"
+    },
+    "process": {
+      "badge": "Pre rastúcich klientov",
+      "title": "Zlepšovanie procesov",
+      "description": "Keď vaša firma rastie, pomôžeme, aby s ňou držalo krok aj jej interné fungovanie — na základe metodiky Lean Six Sigma.",
+      "item1": "Mapovanie a analýza procesov",
+      "item2": "Power BI dashboardy pre prehľad v reálnom čase",
+      "item3": "Pracovné inštrukcie a SOP",
+      "item4": "Analýza úzkych miest"
+    },
+    "pricing": {
+      "title": "O cenách",
+      "description": "Nezverejňujeme cenník, pretože každý projekt je iný. Naše ponuky sú však vždy s fixnou cenou — napíšte nám a dostanete presné čísla.",
+      "button": "Nezáväzná ponuka"
+    }
+  },
+  "referencesPage": {
+    "metaTitle": "Referencie — Pragma",
+    "metaDescription": "Reálne, dokončené projekty: online systém objednávania jedla, firemné weby, softvér na evidenciu pracovného času.",
+    "title": "Referencie",
+    "intro": "Každý projekt na tejto stránke je reálna, dokončená práca. Mená klientov poskytneme na požiadanie, s ich súhlasom.",
+    "problemLabel": "Východisková situácia",
+    "solutionLabel": "Čo sme postavili",
+    "resultLabel": "Výsledok",
+    "cta": {
+      "title": "Riešite podobnú výzvu?",
+      "description": "Povedzte nám, s čím zápasíte — úprimne vám povieme, či vieme pomôcť.",
+      "button": "Nezáväzná ponuka"
+    }
+  },
+  "projects": {
+    "restaurant": {
+      "tag": "Systém na mieru",
+      "title": "Online systém objednávania jedla",
+      "client": "Pre reštauráciu",
+      "oneliner": "Vlastné online objednávanie namiesto telefonátov — bez provízie platforiem.",
+      "problem": "Objednávky reštaurácie prichádzali telefonicky a v správach — v špičke to viedlo k chybám a zmeškaným objednávkam a provízie veľkých donáškových platforiem by pohltili maržu.",
+      "solution": "Vlastné online objednávacie rozhranie: správa jedálneho lístka, príjem objednávok a prehľad pre kuchyňu — pod vlastnou značkou reštaurácie, bez provízií.",
+      "result": "Objednávky prichádzajú na jedno miesto, presne a dohľadateľne; personál sa môže venovať hosťom namiesto telefónu."
+    },
+    "websites": {
+      "tag": "Webová stránka",
+      "title": "Firemné weby",
+      "client": "Pre viacero malých firiem",
+      "oneliner": "Prezentačné stránky, ktoré majitelia s hrdosťou uvádzajú na vizitkách aj v reklame.",
+      "problem": "Viacero malých firiem fungovalo so zastaraným webom alebo úplne bez online prítomnosti — záujemcovia ich nenašli, alebo nezískali dôveryhodný prvý dojem.",
+      "solution": "Moderné, mobilné prezentačné stránky: jasná štruktúra, rýchle načítanie, jednoduchá údržba — podľa potreby vo viacerých jazykoch.",
+      "result": "Profesionálna online prítomnosť, ktorá buduje dôveru a na ktorú majitelia s istotou odkazujú svojich zákazníkov."
+    },
+    "timetracking": {
+      "tag": "Softvér na mieru",
+      "title": "Softvér na evidenciu pracovného času",
+      "client": "Pre firmu",
+      "oneliner": "Presné a vyhľadateľné údaje o odpracovanom čase namiesto papierovej evidencie.",
+      "problem": "Pracovný čas sa evidoval na papieri a v tabuľkách — mesačná uzávierka bola pomalá a plná priestoru na chyby.",
+      "solution": "Jednoduchý softvér na evidenciu pracovného času: pracovníci zapisujú svoje hodiny, vedenie okamžite vidí súhrny a môže ich exportovať pre mzdy.",
+      "result": "Mesačná administratíva trvá zlomok pôvodného času a údaje sú presné a kedykoľvek dohľadateľné."
+    }
+  },
+  "aboutPage": {
+    "metaTitle": "O nás — Pragma",
+    "metaDescription": "Pragma je malá, nezávislá konzultačná dielňa z maďarsko-slovenského pohraničia. Praktické. Presné. Pragma.",
+    "title": "O nás",
+    "p1": "Pragma je grécke slovo: znamená čin, skutok. Nie je to náhoda — veríme, že dobré riešenie sa meria fungujúcimi nástrojmi, nie prezentáciami.",
+    "p2": "Pragma je malá, nezávislá konzultačná dielňa z maďarsko-slovenského pohraničia. Pracujeme pre malé a stredné firmy a rodinné podniky — v troch jazykoch: po maďarsky, slovensky a anglicky.",
+    "p3": "Budeme úprimní: sme malí. Pre vás to znamená, že za faktúrou nie je reťaz account manažérov ani predražená organizácia — hovoríte priamo s tým, kto prácu vykonáva. Preto sme rýchli, flexibilní a cenovo dostupní.",
+    "p4": "Naše služby zlepšovania procesov sú podložené certifikáciou CSSC Lean Six Sigma Green Belt.",
+    "facts": {
+      "languages": {
+        "title": "3 jazyky",
+        "description": "Pracujeme po maďarsky, slovensky a anglicky."
+      },
+      "pricing": {
+        "title": "Fixné ceny",
+        "description": "Naše ponuky majú vždy fixnú cenu — žiadne skryté náklady."
+      },
+      "credential": {
+        "title": "Green Belt",
+        "description": "Certifikácia CSSC Lean Six Sigma Green Belt."
+      }
+    },
+    "cta": {
+      "title": "Spolupracujme.",
+      "description": "Napíšte nám — prvá konzultácia je bezplatná a nezáväzná.",
+      "button": "Nezáväzná ponuka"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Kontakt — Pragma",
+    "metaDescription": "Napíšte nám o svojom projekte — pripravíme nezáväznú ponuku s fixnou cenou.",
+    "title": "Kontakt",
+    "intro": "Napíšte nám pár slov o svojom projekte — pripravíme nezáväznú ponuku s fixnou cenou.",
+    "form": {
+      "name": "Meno",
+      "email": "E-mailová adresa",
+      "company": "Názov firmy (nepovinné)",
+      "service": "S čím vám môžeme pomôcť?",
+      "servicePlaceholder": "Vyberte...",
+      "serviceOptions": {
+        "website": "Webová stránka",
+        "system": "Systém na mieru / webová aplikácia",
+        "process": "Zlepšovanie procesov / dashboard",
+        "other": "Iné"
+      },
+      "message": "Správa",
+      "submit": "Odoslať správu",
+      "sending": "Odosiela sa...",
+      "success": "Ďakujeme! Vaša správa bola doručená — čoskoro sa vám ozveme.",
+      "error": "Správu sa nepodarilo odoslať. Skúste to, prosím, neskôr znova.",
+      "validationRequired": "Vyplňte, prosím, toto pole.",
+      "validationEmail": "Zadajte, prosím, platnú e-mailovú adresu."
+    }
   }
 }

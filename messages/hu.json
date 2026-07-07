@@ -30,7 +30,195 @@
     "rights": "Minden jog fenntartva."
   },
   "home": {
-    "title": "Pragma",
-    "placeholder": "Weboldalak és személyre szabott rendszerek kis- és középvállalkozásoknak."
+    "hero": {
+      "headline": "Weboldalak és személyre szabott rendszerek kis- és középvállalkozásoknak.",
+      "subheadline": "A Pragma megtervezi és felépíti vállalkozása weboldalát és belső rendszereit — gyorsan, érthetően, három nyelven. Ma a digitális alapokat rakjuk le, holnap a folyamatait tesszük hatékonyabbá.",
+      "ctaPrimary": "Kérjen ajánlatot",
+      "ctaSecondary": "Nézze meg referenciáinkat"
+    },
+    "services": {
+      "title": "Miben segítünk?",
+      "websites": {
+        "title": "Weboldalak",
+        "description": "Gyors, mobilbarát, többnyelvű céges weboldalak, amelyek bizalmat építenek és ügyfeleket hoznak."
+      },
+      "systems": {
+        "title": "Egyedi rendszerek",
+        "description": "Rendelési rendszerek, nyilvántartások, belső adminisztrációs eszközök — a szétszórt Excel-táblák helyett egyetlen áttekinthető felület."
+      },
+      "webapps": {
+        "title": "Webalkalmazások",
+        "description": "Böngészőből elérhető, személyre szabott alkalmazások, amelyek pontosan úgy működnek, ahogyan a vállalkozása."
+      },
+      "process": {
+        "badge": "Ahogy vállalkozása növekszik",
+        "title": "Folyamatfejlesztés és dashboardok",
+        "description": "Segítünk átlátni és felgyorsítani működését — folyamattérképekkel, Power BI-kimutatásokkal, Lean Six Sigma módszertannal."
+      },
+      "more": "Részletek"
+    },
+    "references": {
+      "title": "Valódi projektek, valódi eredmények",
+      "subtitle": "Minden referenciánk valós, elkészült munka.",
+      "cta": "Összes referencia"
+    },
+    "how": {
+      "title": "Így dolgozunk",
+      "step1": {
+        "title": "Konzultáció",
+        "description": "Megismerjük vállalkozását és céljait. Ingyenes, kötelezettségmentes."
+      },
+      "step2": {
+        "title": "Ajánlat",
+        "description": "Fix ár, világos terjedelem, érthető nyelven. Nincsenek rejtett költségek."
+      },
+      "step3": {
+        "title": "Megvalósítás",
+        "description": "Közvetlenül azzal egyeztet, aki a rendszert építi — nem egy értékesítővel."
+      },
+      "step4": {
+        "title": "Támogatás",
+        "description": "Átadás után sem tűnünk el: karbantartás, továbbfejlesztés, tanácsadás."
+      },
+      "highlight": "Fix árak. Közvetlen kommunikáció. Magyarul, szlovákul, angolul."
+    },
+    "finalCta": {
+      "title": "Beszéljük meg, mire van szüksége.",
+      "description": "Írjon nekünk röviden a projektjéről — kötelezettségmentes, fix árú ajánlatot készítünk.",
+      "button": "Kérjen ajánlatot"
+    }
+  },
+  "servicesPage": {
+    "metaTitle": "Szolgáltatások — Pragma",
+    "metaDescription": "Weboldalak, egyedi rendszerek és folyamatfejlesztés kis- és középvállalkozásoknak — fix áras ajánlattal.",
+    "title": "Szolgáltatások",
+    "intro": "Nem csomagokat árulunk, hanem megoldásokat. Minden projekt konzultációval kezdődik, és fix árú ajánlattal folytatódik.",
+    "websites": {
+      "title": "Weboldalak",
+      "description": "Üzleti weboldalak, amelyek nem csak jól néznek ki: gyorsan töltenek be mobilon is, több nyelven szólnak ügyfeleihez, és könnyen bővíthetők. A cél, hogy a weboldala dolgozzon: bizalmat építsen és megkereséseket hozzon.",
+      "item1": "Céges bemutatkozó oldalak",
+      "item2": "Mobil-első kialakítás, gyors betöltés",
+      "item3": "Többnyelvű megoldások (magyar, szlovák, angol)",
+      "item4": "Keresőbarát felépítés"
+    },
+    "systems": {
+      "title": "Egyedi rendszerek",
+      "description": "Ha vállalkozása kinőtte az Excel-táblázatokat és a papírt, egyedi rendszert építünk — pontosan az Ön folyamataihoz igazítva. Se több, se kevesebb.",
+      "item1": "Rendelési és foglalási rendszerek",
+      "item2": "Nyilvántartások és követőeszközök",
+      "item3": "Belső adminisztrációs felületek",
+      "item4": "Excel-táblázatból webalkalmazás"
+    },
+    "process": {
+      "badge": "Növekvő ügyfeleinknek",
+      "title": "Folyamatfejlesztés",
+      "description": "Ahogy vállalkozása növekszik, segítünk abban, hogy a belső működése is lépést tartson — Lean Six Sigma módszertan alapján.",
+      "item1": "Folyamatfelmérés és folyamattérképek",
+      "item2": "Power BI dashboardok a valós idejű áttekintéshez",
+      "item3": "Munkautasítások és SOP-k",
+      "item4": "Szűk keresztmetszetek elemzése"
+    },
+    "pricing": {
+      "title": "Az árakról",
+      "description": "Nem teszünk közzé árlistát, mert minden projekt más. Az ajánlatunk viszont mindig fix áras — írjon nekünk, és pontos számokat kap.",
+      "button": "Kérjen ajánlatot"
+    }
+  },
+  "referencesPage": {
+    "metaTitle": "Referenciák — Pragma",
+    "metaDescription": "Valós, elkészült projektek: online ételrendelő rendszer, céges weboldalak, munkaidő-nyilvántartó szoftver.",
+    "title": "Referenciák",
+    "intro": "Minden itt szereplő projekt valós, elkészült munka. Az ügyfelek nevét kérésre, engedélyükkel adjuk ki.",
+    "problemLabel": "A kiindulás",
+    "solutionLabel": "Amit építettünk",
+    "resultLabel": "Az eredmény",
+    "cta": {
+      "title": "Hasonló kihívása van?",
+      "description": "Mesélje el, mivel küzd — megmondjuk őszintén, tudunk-e segíteni.",
+      "button": "Kérjen ajánlatot"
+    }
+  },
+  "projects": {
+    "restaurant": {
+      "tag": "Egyedi rendszer",
+      "title": "Online ételrendelő rendszer",
+      "client": "Egy étterem megbízásából",
+      "oneliner": "Telefonos rendelések helyett saját online rendelőfelület — platformjutalék nélkül.",
+      "problem": "Az étterem rendelései telefonon és üzenetekben érkeztek — csúcsidőben ez hibákhoz és kihagyott rendelésekhez vezetett, a nagy ételrendelő platformok jutaléka pedig felemésztette volna a hasznot.",
+      "solution": "Saját online rendelőfelület: étlapkezelés, rendelésfelvétel és konyhai áttekintés — az étterem saját arculatával, jutalék nélkül.",
+      "result": "A rendelések egy helyen, pontosan és visszakereshetően futnak be; a személyzet a vendégekkel foglalkozhat a telefon helyett."
+    },
+    "websites": {
+      "tag": "Weboldal",
+      "title": "Céges weboldalak",
+      "client": "Több kisvállalkozás megbízásából",
+      "oneliner": "Bemutatkozó oldalak, amelyeket a tulajdonosok bátran adnak meg névjegyen és hirdetésben.",
+      "problem": "Több kisvállalkozás elavult weboldallal vagy egyáltalán online jelenlét nélkül működött — az érdeklődők nem találták meg őket, vagy nem kaptak megbízható első benyomást.",
+      "solution": "Modern, mobilbarát bemutatkozó oldalak: érthető struktúra, gyors betöltés, egyszerű karbantarthatóság — igény szerint több nyelven.",
+      "result": "Professzionális online jelenlét, amely bizalmat épít, és amelyre a tulajdonosok nyugodtan hivatkoznak ügyfeleik előtt."
+    },
+    "timetracking": {
+      "tag": "Egyedi szoftver",
+      "title": "Munkaidő-nyilvántartó szoftver",
+      "client": "Egy vállalat megbízásából",
+      "oneliner": "Papír alapú nyilvántartás helyett pontos, kereshető munkaidő-adatok.",
+      "problem": "A munkaidő nyilvántartása papíron és táblázatokban történt — a hónap végi összesítés lassú volt, és tele volt hibalehetőséggel.",
+      "solution": "Egyszerű munkaidő-nyilvántartó szoftver: a dolgozók rögzítik az idejüket, a vezetőség azonnal látja az összesítéseket, és exportálhatja azokat a bérszámfejtéshez.",
+      "result": "A hóvégi adminisztráció ideje töredékére csökkent, az adatok pontosak és bármikor visszakereshetők."
+    }
+  },
+  "aboutPage": {
+    "metaTitle": "Rólunk — Pragma",
+    "metaDescription": "A Pragma kis, független tanácsadó műhely a magyar–szlovák határrégióból. Praktikus. Precíz. Pragma.",
+    "title": "Rólunk",
+    "p1": "A pragma görög szó: tettet, cselekvést jelent. Nem véletlenül lett ez a nevünk — abban hiszünk, hogy a jó megoldás nem prezentációkban, hanem működő eszközökben mérhető.",
+    "p2": "A Pragma kis, független tanácsadó műhely a magyar–szlovák határrégióból. Kis- és középvállalkozásoknak és családi cégeknek dolgozunk — három nyelven: magyarul, szlovákul és angolul.",
+    "p3": "Őszinték leszünk: kicsik vagyunk. Önnek ez azt jelenti, hogy nincs ügyfélmenedzser-láncolat és túlárazott szervezet a számla mögött — közvetlenül azzal beszél, aki a munkát végzi. Ezért vagyunk gyorsak, rugalmasak és megfizethetők.",
+    "p4": "A folyamatfejlesztési szolgáltatásaink mögött CSSC Lean Six Sigma Green Belt minősítés áll.",
+    "facts": {
+      "languages": {
+        "title": "3 nyelv",
+        "description": "Magyarul, szlovákul és angolul dolgozunk."
+      },
+      "pricing": {
+        "title": "Fix árak",
+        "description": "Az ajánlatunk mindig fix áras — nincsenek rejtett költségek."
+      },
+      "credential": {
+        "title": "Green Belt",
+        "description": "CSSC Lean Six Sigma Green Belt minősítés."
+      }
+    },
+    "cta": {
+      "title": "Dolgozzunk együtt.",
+      "description": "Írjon nekünk — az első konzultáció ingyenes és kötelezettségmentes.",
+      "button": "Kérjen ajánlatot"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Kapcsolat — Pragma",
+    "metaDescription": "Írjon nekünk projektjéről — kötelezettségmentes, fix árú ajánlatot készítünk.",
+    "title": "Kapcsolat",
+    "intro": "Írjon nekünk röviden a projektjéről — kötelezettségmentes, fix árú ajánlatot készítünk.",
+    "form": {
+      "name": "Név",
+      "email": "E-mail cím",
+      "company": "Cégnév (nem kötelező)",
+      "service": "Miben segíthetünk?",
+      "servicePlaceholder": "Válasszon...",
+      "serviceOptions": {
+        "website": "Weboldal",
+        "system": "Egyedi rendszer / webalkalmazás",
+        "process": "Folyamatfejlesztés / dashboard",
+        "other": "Egyéb"
+      },
+      "message": "Üzenet",
+      "submit": "Üzenet küldése",
+      "sending": "Küldés folyamatban...",
+      "success": "Köszönjük! Üzenete megérkezett — hamarosan jelentkezünk.",
+      "error": "Az üzenetet nem sikerült elküldeni. Kérjük, próbálja meg később újra.",
+      "validationRequired": "Kérjük, töltse ki ezt a mezőt.",
+      "validationEmail": "Kérjük, érvényes e-mail címet adjon meg."
+    }
   }
 }

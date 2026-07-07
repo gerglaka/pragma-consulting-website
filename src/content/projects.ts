@@ -1,0 +1,25 @@
+// Portfolio projects — REAL past work, anonymized (see CLAUDE.md).
+// Copy lives in messages/<locale>.json under "projects.<id>".
+// `gradient` drives the CSS mockup placeholder until real screenshots arrive.
+
+export type ProjectId = "restaurant" | "websites" | "timetracking";
+
+export interface Project {
+  id: ProjectId;
+  gradient: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: "restaurant",
+    gradient: "from-brand-deep via-brand to-[#5b7bc7]",
+  },
+  {
+    id: "websites",
+    gradient: "from-[#24488f] via-brand to-[#7d97d6]",
+  },
+  {
+    id: "timetracking",
+    gradient: "from-[#122c5e] via-brand-deep to-brand",
+  },
+];

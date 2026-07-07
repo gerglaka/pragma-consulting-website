@@ -30,7 +30,195 @@
     "rights": "All rights reserved."
   },
   "home": {
-    "title": "Pragma",
-    "placeholder": "Websites and custom systems for small and medium businesses."
+    "hero": {
+      "headline": "Websites and custom systems for small and medium businesses.",
+      "subheadline": "Pragma designs and builds your company's website and internal systems — fast, clear, and in three languages. We lay your digital foundations today, and streamline your operations as you grow.",
+      "ctaPrimary": "Get a quote",
+      "ctaSecondary": "See our references"
+    },
+    "services": {
+      "title": "How we can help",
+      "websites": {
+        "title": "Websites",
+        "description": "Fast, mobile-friendly, multilingual business websites that build trust and bring in customers."
+      },
+      "systems": {
+        "title": "Custom systems",
+        "description": "Order systems, registries, internal admin tools — one clear interface instead of scattered spreadsheets."
+      },
+      "webapps": {
+        "title": "Web applications",
+        "description": "Browser-based applications tailored to work exactly the way your business does."
+      },
+      "process": {
+        "badge": "As your business grows",
+        "title": "Process improvement & dashboards",
+        "description": "We help you see and speed up your operations — with process maps, Power BI dashboards and Lean Six Sigma methodology."
+      },
+      "more": "Learn more"
+    },
+    "references": {
+      "title": "Real projects, real results",
+      "subtitle": "Every reference is real, completed work.",
+      "cta": "All references"
+    },
+    "how": {
+      "title": "How we work",
+      "step1": {
+        "title": "Consultation",
+        "description": "We get to know your business and your goals. Free, no obligation."
+      },
+      "step2": {
+        "title": "Proposal",
+        "description": "Fixed price, clear scope, plain language. No hidden costs."
+      },
+      "step3": {
+        "title": "Build",
+        "description": "You talk directly with the person building your system — not a salesperson."
+      },
+      "step4": {
+        "title": "Support",
+        "description": "We don't disappear after handover: maintenance, improvements, advice."
+      },
+      "highlight": "Fixed prices. Direct communication. In Hungarian, Slovak and English."
+    },
+    "finalCta": {
+      "title": "Let's talk about what you need.",
+      "description": "Tell us a few words about your project — we'll prepare a no-obligation, fixed-price quote.",
+      "button": "Get a quote"
+    }
+  },
+  "servicesPage": {
+    "metaTitle": "Services — Pragma",
+    "metaDescription": "Websites, custom systems and process improvement for small and medium businesses — with fixed-price quotes.",
+    "title": "Services",
+    "intro": "We don't sell packages — we build solutions. Every project starts with a consultation and continues with a fixed-price proposal.",
+    "websites": {
+      "title": "Websites",
+      "description": "Business websites that do more than look good: they load fast on mobile, speak to your customers in multiple languages, and are easy to extend. The goal is a website that works for you — building trust and bringing in enquiries.",
+      "item1": "Business presentation sites",
+      "item2": "Mobile-first design, fast loading",
+      "item3": "Multilingual solutions (Hungarian, Slovak, English)",
+      "item4": "Search-engine-friendly structure"
+    },
+    "systems": {
+      "title": "Custom systems",
+      "description": "When your business has outgrown spreadsheets and paper, we build a custom system — fitted exactly to your processes. No more, no less.",
+      "item1": "Order and booking systems",
+      "item2": "Registries and tracking tools",
+      "item3": "Internal admin interfaces",
+      "item4": "From Excel sheet to web application"
+    },
+    "process": {
+      "badge": "For growing clients",
+      "title": "Process improvement",
+      "description": "As your business grows, we help your internal operations keep pace — based on Lean Six Sigma methodology.",
+      "item1": "Process mapping and assessment",
+      "item2": "Power BI dashboards for real-time overview",
+      "item3": "Work instructions and SOPs",
+      "item4": "Bottleneck analysis"
+    },
+    "pricing": {
+      "title": "About pricing",
+      "description": "We don't publish a price list because every project is different. Our quotes, however, are always fixed-price — write to us and you'll get exact numbers.",
+      "button": "Get a quote"
+    }
+  },
+  "referencesPage": {
+    "metaTitle": "References — Pragma",
+    "metaDescription": "Real, completed projects: online food ordering system, business websites, worker time-tracking software.",
+    "title": "References",
+    "intro": "Every project here is real, completed work. Client names are shared on request, with their permission.",
+    "problemLabel": "The starting point",
+    "solutionLabel": "What we built",
+    "resultLabel": "The result",
+    "cta": {
+      "title": "Facing a similar challenge?",
+      "description": "Tell us what you're struggling with — we'll tell you honestly whether we can help.",
+      "button": "Get a quote"
+    }
+  },
+  "projects": {
+    "restaurant": {
+      "tag": "Custom system",
+      "title": "Online food ordering system",
+      "client": "For a restaurant",
+      "oneliner": "A branded online ordering interface instead of phone orders — with no platform commission.",
+      "problem": "The restaurant's orders came in by phone and messages — at peak times this led to mistakes and missed orders, while the big food-delivery platforms' commissions would have eaten the margin.",
+      "solution": "A dedicated online ordering interface: menu management, order intake and a kitchen overview — under the restaurant's own brand, commission-free.",
+      "result": "Orders now arrive in one place, accurately and traceably; staff can focus on guests instead of the phone."
+    },
+    "websites": {
+      "tag": "Website",
+      "title": "Business websites",
+      "client": "For several small businesses",
+      "oneliner": "Presentation sites their owners are proud to put on business cards and ads.",
+      "problem": "Several small businesses were operating with outdated websites or no online presence at all — prospects couldn't find them, or didn't get a trustworthy first impression.",
+      "solution": "Modern, mobile-friendly presentation sites: clear structure, fast loading, easy maintenance — multilingual where needed.",
+      "result": "A professional online presence that builds trust and that the owners confidently point their customers to."
+    },
+    "timetracking": {
+      "tag": "Custom software",
+      "title": "Worker time-tracking software",
+      "client": "For a company",
+      "oneliner": "Accurate, searchable working-time data instead of paper records.",
+      "problem": "Working hours were tracked on paper and in spreadsheets — the end-of-month summary was slow and full of room for error.",
+      "solution": "Simple time-tracking software: workers log their hours, management sees summaries instantly and can export them for payroll.",
+      "result": "End-of-month admin now takes a fraction of the time, and the data is accurate and searchable at any moment."
+    }
+  },
+  "aboutPage": {
+    "metaTitle": "About — Pragma",
+    "metaDescription": "Pragma is a small, independent consultancy from the Hungarian–Slovak border region. Practical. Precise. Pragma.",
+    "title": "About",
+    "p1": "Pragma is a Greek word: it means deed, action. That's no accident — we believe a good solution is measured in working tools, not presentations.",
+    "p2": "Pragma is a small, independent consultancy from the Hungarian–Slovak border region. We work with small and medium businesses and family companies — in three languages: Hungarian, Slovak and English.",
+    "p3": "Let's be honest: we are small. For you, that means no chain of account managers and no overpriced organisation behind the invoice — you talk directly with the person doing the work. That's why we're fast, flexible and affordable.",
+    "p4": "Our process improvement services are backed by a CSSC Lean Six Sigma Green Belt certification.",
+    "facts": {
+      "languages": {
+        "title": "3 languages",
+        "description": "We work in Hungarian, Slovak and English."
+      },
+      "pricing": {
+        "title": "Fixed prices",
+        "description": "Our quotes are always fixed-price — no hidden costs."
+      },
+      "credential": {
+        "title": "Green Belt",
+        "description": "CSSC Lean Six Sigma Green Belt certification."
+      }
+    },
+    "cta": {
+      "title": "Let's work together.",
+      "description": "Write to us — the first consultation is free and comes with no obligation.",
+      "button": "Get a quote"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact — Pragma",
+    "metaDescription": "Tell us about your project — we'll prepare a no-obligation, fixed-price quote.",
+    "title": "Contact",
+    "intro": "Tell us a few words about your project — we'll prepare a no-obligation, fixed-price quote.",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "company": "Company (optional)",
+      "service": "What can we help with?",
+      "servicePlaceholder": "Select...",
+      "serviceOptions": {
+        "website": "Website",
+        "system": "Custom system / web application",
+        "process": "Process improvement / dashboard",
+        "other": "Other"
+      },
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has arrived — we'll get back to you soon.",
+      "error": "The message could not be sent. Please try again later.",
+      "validationRequired": "Please fill in this field.",
+      "validationEmail": "Please enter a valid email address."
+    }
   }
 }
