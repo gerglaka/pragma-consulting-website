@@ -94,3 +94,10 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided:** README rewritten as the handover doc: run locally, edit copy (message JSONs + slugs + projects), swap DeviceFrame → next/image screenshots, env vars, Vercel deploy steps, verification commands. `.env.example` added.
 - **Fact:** Final verification (Checkpoint 2): build 0 errors; 45/45 page×locale×viewport checks; Lighthouse hu 91/100/100/100, sk 91/100/100/100, en 96/100/100/100; contact API valid/invalid/honeypot paths verified; zero MISSING_MESSAGE; keyboard tab order correct (skip link first, visible focus styles, honeypot excluded).
 - **Not done on purpose (awaiting Gergő):** deploy/push — never without explicit yes; real contact email + Resend domain; SK native review; real screenshots.
+
+## 2026-07-07 — Session end: where we left off
+
+- **State:** All 4 phases complete and committed (`main` @ `0ab0fcd`, working tree clean). Checkpoint 2 results presented; Gergő wants to preview the site before approving deploy.
+- **Next session:** Gergő reviews locally (`npm run build && npm run start -- -p 3199`, or phone via LAN IP). Then he decides: Vercel preview deploy (no domain/env needed) or straight to launch prep. Do NOT deploy or push without his explicit yes.
+- **Open items for go-live:** RESEND_API_KEY + CONTACT_TO_EMAIL/CONTACT_FROM_EMAIL (Resend domain verification), NEXT_PUBLIC_SITE_URL, SK native review, real reference screenshots.
+- **Note:** the local server on port 3199 was started from this session and may not survive a reboot/VSCode close — just restart it.
