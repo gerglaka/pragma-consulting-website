@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Pragma — Websites and custom systems",
+    "description": "Websites, custom systems and process improvement for small and medium businesses. Practical. Precise. Pragma."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "references": "References",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "menuOpen": "Open menu",
+    "menuTitle": "Navigation",
+    "cta": "Get a quote",
+    "languageSwitcher": "Select language"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "system": "System"
+  },
+  "footer": {
+    "tagline": "Practical. Precise. Pragma.",
+    "description": "Websites and custom systems for small and medium businesses.",
+    "navTitle": "Pages",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "title": "Pragma",
+    "placeholder": "Websites and custom systems for small and medium businesses."
+  }
+}

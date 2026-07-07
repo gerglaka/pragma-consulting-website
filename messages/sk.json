@@ -1,0 +1,37 @@
+{
+  "_note": "SK: needs native review",
+  "meta": {
+    "title": "Pragma — Webové stránky a systémy na mieru",
+    "description": "Webové stránky, systémy na mieru a zlepšovanie procesov pre malé a stredné firmy. Praktické. Presné. Pragma."
+  },
+  "nav": {
+    "home": "Domov",
+    "services": "Služby",
+    "references": "Referencie",
+    "about": "O nás",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "menuOpen": "Otvoriť menu",
+    "menuTitle": "Navigácia",
+    "cta": "Nezáväzná ponuka",
+    "languageSwitcher": "Výber jazyka"
+  },
+  "theme": {
+    "toggle": "Prepnúť tému",
+    "light": "Svetlý režim",
+    "dark": "Tmavý režim",
+    "system": "Podľa systému"
+  },
+  "footer": {
+    "tagline": "Praktické. Presné. Pragma.",
+    "description": "Webové stránky a systémy na mieru pre malé a stredné firmy.",
+    "navTitle": "Stránky",
+    "contactTitle": "Kontakt",
+    "rights": "Všetky práva vyhradené."
+  },
+  "home": {
+    "title": "Pragma",
+    "placeholder": "Webové stránky a systémy na mieru pre malé a stredné firmy."
+  }
+}

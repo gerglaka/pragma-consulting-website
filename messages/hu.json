@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Pragma — Weboldalak és személyre szabott rendszerek",
+    "description": "Weboldalak, egyedi rendszerek és folyamatfejlesztés kis- és középvállalkozásoknak. Praktikus. Precíz. Pragma."
+  },
+  "nav": {
+    "home": "Főoldal",
+    "services": "Szolgáltatások",
+    "references": "Referenciák",
+    "about": "Rólunk",
+    "contact": "Kapcsolat"
+  },
+  "header": {
+    "menuOpen": "Menü megnyitása",
+    "menuTitle": "Navigáció",
+    "cta": "Kérjen ajánlatot",
+    "languageSwitcher": "Nyelv kiválasztása"
+  },
+  "theme": {
+    "toggle": "Téma váltása",
+    "light": "Világos mód",
+    "dark": "Sötét mód",
+    "system": "Rendszer szerint"
+  },
+  "footer": {
+    "tagline": "Praktikus. Precíz. Pragma.",
+    "description": "Weboldalak és személyre szabott rendszerek kis- és középvállalkozásoknak.",
+    "navTitle": "Oldalak",
+    "contactTitle": "Kapcsolat",
+    "rights": "Minden jog fenntartva."
+  },
+  "home": {
+    "title": "Pragma",
+    "placeholder": "Weboldalak és személyre szabott rendszerek kis- és középvállalkozásoknak."
+  }
+}
