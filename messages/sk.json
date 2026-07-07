@@ -57,7 +57,7 @@
         "title": "Zlepšovanie procesov a dashboardy",
         "description": "Pomôžeme vám získať prehľad a zrýchliť fungovanie — procesnými mapami, Power BI reportmi a metodikou Lean Six Sigma."
       },
-      "more": "Viac informácií"
+      "more": "Viac o zlepšovaní procesov"
     },
     "references": {
       "title": "Skutočné projekty, skutočné výsledky",
@@ -222,5 +222,8 @@
       "validationRequired": "Vyplňte, prosím, toto pole.",
       "validationEmail": "Zadajte, prosím, platnú e-mailovú adresu."
     }
+  },
+  "a11y": {
+    "skipToContent": "Preskočiť na obsah"
   }
 }

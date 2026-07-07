@@ -5,14 +5,32 @@ import {
   DatabaseIcon,
   GlobeIcon,
 } from "lucide-react";
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { DeviceFrame } from "@/components/device-frame";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return buildPageMetadata({
+    locale: locale as Locale,
+    href: "/",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 const PILLAR_A = [
   { key: "websites", Icon: GlobeIcon },
@@ -39,7 +57,7 @@ export default function HomePage({
           className="pointer-events-none absolute -top-40 right-0 size-[36rem] rounded-full bg-primary/10 blur-3xl dark:bg-primary/15"
         />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-          <Reveal>
+          <div className="animate-fade-up">
             <p className="flex items-center gap-3 text-sm font-semibold tracking-widest text-primary uppercase">
               <span aria-hidden="true" className="h-px w-8 bg-gold" />
               {t("hero.eyebrow")}
@@ -66,7 +84,7 @@ export default function HomePage({
                 <ArrowRightIcon aria-hidden="true" />
               </Button>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 

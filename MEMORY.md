@@ -67,3 +67,24 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided:** Hover micro-interactions on cards: border-primary tint + shadow + 1px lift, `motion-safe:` gated. Gold reserved for final-CTA button and Pillar B accents only.
 
 - **Fact:** `scripts/check-pages.mjs` added — spawns system Chromium, checks every page × locale × 375/768/1440px for horizontal overflow + console errors. Phase 2 exit state: 45/45 checks pass, `npm run build` clean.
+
+## 2026-07-07 — Phase 3 SEO, i18n, performance
+
+- **Decided:** All SEO URL building goes through `src/lib/seo.ts` — `SITE_URL` comes from `NEXT_PUBLIC_SITE_URL` (fallback `http://localhost:3199`); the build is domain-agnostic. `buildPageMetadata()` produces title/description + canonical + hreflang (`hu`/`sk`/`en`/`x-default` → default locale) + OpenGraph/Twitter for every page, always with localized slugs via next-intl `getPathname`.
+  **Why:** one source of truth; hreflang with localized slugs is easy to get wrong by hand.
+
+- **Decided:** Per-locale OG images via `src/app/[locale]/opengraph-image.tsx` (next/og, 1200×630): brand gradient, enso mark, localized tagline + hero headline. Space Grotesk TTFs are vendored in `src/assets/fonts/` because satori can't use woff2 and build-time network fetches are fragile. Diacritics verified visually (ő, é, á, í render correctly).
+
+- **Decided:** JSON-LD: `ProfessionalService` in the locale layout (name, slogan, areaServed HU+SK, knowsLanguage) + per-page `WebPage`/`CollectionPage`/`AboutPage`/`ContactPage`. No `priceRange`, no email (no verified address yet), no invented data.
+
+- **Decided:** `sitemap.ts` (all 15 URLs with xhtml:link alternates) and `robots.ts` (allow all, disallow `/api/`, sitemap ref).
+
+- **Decided:** Above-the-fold content animates via CSS `animate-fade-up` (opacity 0.4→1 + 16px rise, reduced-motion safe), NOT the JS `Reveal` component. Motion-based `Reveal` stays for below-the-fold sections only.
+  **Why:** Motion's SSR output holds content at `opacity: 0` until hydration → hero LCP measured at ~4.6s. Also: Chromium never emits LCP candidates for elements painted at opacity 0, so the animation must not start fully transparent. See ERRORS.md.
+
+- **Decided:** Inter (body) is `preload: false`; Space Grotesk (display) stays preloaded.
+  **Why:** the LCP hero text uses Space Grotesk; preloading all four font files (175 KB) made them compete for early bandwidth and LCP landed at 3.7–3.8s (Perf 87–90). Prioritizing the display font: hu 91 / sk 91 / en 96. Fact: next/font ships the full variable file for variable Google fonts — `weight:` arrays don't shrink payload.
+
+- **Decided:** Skip-to-content link added (localized, `a11y.skipToContent`), `main` has `id="content"`. Generic "Learn more"-type link texts replaced with descriptive ones in all locales (Lighthouse SEO flagged EN).
+
+- **Fact:** Phase 3 exit state: Lighthouse mobile homepage hu 91 / sk 91 / en 96 performance, 100/100/100 a11y/BP/SEO on all three; 45/45 page checks; build + tsc + eslint clean. Lab LCP (~3.3s) is dominated by a Lantern simulated-throttling artifact that pins LCP to webfont arrival even with `font-display: swap`; real users see fallback text at ~1s, and production CDN TTFB will further improve field scores.

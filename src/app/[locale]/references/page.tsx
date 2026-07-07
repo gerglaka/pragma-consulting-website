@@ -3,10 +3,13 @@ import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { DeviceFrame } from "@/components/device-frame";
+import { JsonLd } from "@/components/json-ld";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -15,7 +18,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "referencesPage" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return buildPageMetadata({
+    locale: locale as Locale,
+    href: "/references",
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  });
 }
 
 export default function ReferencesPage({
@@ -30,14 +38,24 @@ export default function ReferencesPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-      <Reveal>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: t("metaTitle"),
+          description: t("metaDescription"),
+          url: absoluteUrl(locale as Locale, "/references"),
+          inLanguage: locale,
+        }}
+      />
+      <div className="animate-fade-up">
         <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
           {t("title")}
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           {t("intro")}
         </p>
-      </Reveal>
+      </div>
 
       <div className="mt-14 space-y-16">
         {projects.map((project, i) => (

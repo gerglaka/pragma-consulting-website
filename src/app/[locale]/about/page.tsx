@@ -3,9 +3,12 @@ import { AwardIcon, BadgeEuroIcon, LanguagesIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
+import { JsonLd } from "@/components/json-ld";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,7 +17,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "aboutPage" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return buildPageMetadata({
+    locale: locale as Locale,
+    href: "/about",
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  });
 }
 
 const FACTS = [
@@ -34,20 +42,30 @@ export default function AboutPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-      <Reveal>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: t("metaTitle"),
+          description: t("metaDescription"),
+          url: absoluteUrl(locale as Locale, "/about"),
+          inLanguage: locale,
+        }}
+      />
+      <div className="animate-fade-up">
         <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
           {t("title")}
         </h1>
-      </Reveal>
+      </div>
 
-      <Reveal className="mt-8 max-w-2xl space-y-5 text-lg leading-relaxed">
+      <div className="animate-fade-up mt-8 max-w-2xl space-y-5 text-lg leading-relaxed [animation-delay:120ms]">
         <p className="font-display text-xl font-semibold text-primary">
           {t("p1")}
         </p>
         <p>{t("p2")}</p>
         <p>{t("p3")}</p>
         <p>{t("p4")}</p>
-      </Reveal>
+      </div>
 
       <div className="mt-14 grid gap-4 sm:grid-cols-3">
         {FACTS.map(({ key, Icon }, i) => (

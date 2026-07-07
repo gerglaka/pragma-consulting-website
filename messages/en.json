@@ -56,7 +56,7 @@
         "title": "Process improvement & dashboards",
         "description": "We help you see and speed up your operations — with process maps, Power BI dashboards and Lean Six Sigma methodology."
       },
-      "more": "Learn more"
+      "more": "More about process improvement"
     },
     "references": {
       "title": "Real projects, real results",
@@ -221,5 +221,8 @@
       "validationRequired": "Please fill in this field.",
       "validationEmail": "Please enter a valid email address."
     }
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   }
 }

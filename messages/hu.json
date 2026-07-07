@@ -56,7 +56,7 @@
         "title": "Folyamatfejlesztés és dashboardok",
         "description": "Segítünk átlátni és felgyorsítani működését — folyamattérképekkel, Power BI-kimutatásokkal, Lean Six Sigma módszertannal."
       },
-      "more": "Részletek"
+      "more": "Folyamatfejlesztésről bővebben"
     },
     "references": {
       "title": "Valódi projektek, valódi eredmények",
@@ -221,5 +221,8 @@
       "validationRequired": "Kérjük, töltse ki ezt a mezőt.",
       "validationEmail": "Kérjük, érvényes e-mail címet adjon meg."
     }
+  },
+  "a11y": {
+    "skipToContent": "Ugrás a tartalomra"
   }
 }
