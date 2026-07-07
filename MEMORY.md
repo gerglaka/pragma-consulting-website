@@ -36,3 +36,19 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided:** shadcn components installed: button, input, textarea, select, label, sheet (mobile nav). Only what's needed.
 
 - **Fact:** Removed create-next-app boilerplate `src/app/layout.tsx` + `page.tsx` — replaced by `src/app/[locale]/layout.tsx` + `page.tsx` (required by next-intl structure).
+
+## 2026-07-07 — Phase 1 content & pages
+
+- **Decided (Checkpoint 1, approved by Gergő):** Hero headline uses the longer "kis- és középvállalkozásoknak"; NO response-time promise ("48 órán belül" rejected by Gergő). Tone: formal Ön/Vy, direct, warm, zero buzzwords.
+
+- **Decided:** Copy structure: all strings in `messages/{hu,sk,en}.json`; project case studies under `projects.*` namespace; page structure (order, gradients) in `src/content/projects.ts`. HU drafted first, then EN, then SK (SK flagged for native review via `_note`).
+
+- **Decided:** References use CSS-only `DeviceFrame` mockups (browser chrome + brand gradient + skeleton bars) — no fake screenshots. Real screenshots swap in later.
+
+- **Decided:** No prices anywhere; Services page has an "About pricing" section that routes to contact. No invented metrics in reference results (qualitative outcomes only).
+
+- **Decided:** Contact flow: client form (manual localized validation, honeypot field `website`) → `POST /api/contact` → Resend. Env vars: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` (falls back to Resend onboarding sender). Without API key, the route logs to console and returns success (dev/build never breaks). Honeypot hits return fake success without sending.
+
+- **Fact:** Internal route names are English (`/[locale]/services` etc.); localized public slugs (`/hu/szolgaltatasok`, `/sk/sluzby`) are rewritten by the next-intl proxy, and internal-name URLs 307-redirect to the localized slug.
+
+- **Follow-up needed:** real contact email address + Resend domain verification before go-live; SK native review; real screenshots for references.
