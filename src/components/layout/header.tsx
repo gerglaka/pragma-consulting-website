@@ -38,7 +38,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav aria-label={t("header.menuTitle")} className="hidden md:block">
+        <nav aria-label={t("header.menuTitle")} className="hidden lg:block">
           <ul className="flex items-center gap-6">
             {NAV_ITEMS.map((item) => (
               <li key={item.key}>
@@ -63,7 +63,7 @@ export function Header() {
           <LanguageSwitcher />
           <ThemeToggle />
           <Button
-            className="hidden md:inline-flex"
+            className="hidden lg:inline-flex"
             render={<Link href="/contact" />}
           >
             {t("header.cta")}
@@ -76,7 +76,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="md:hidden"
+                  className="lg:hidden"
                   aria-label={t("header.menuOpen")}
                 />
               }

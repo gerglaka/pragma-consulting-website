@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { DeviceFrame } from "@/components/device-frame";
+import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
@@ -29,17 +30,19 @@ export default function ReferencesPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-      <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-        {t("intro")}
-      </p>
+      <Reveal>
+        <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+          {t("title")}
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          {t("intro")}
+        </p>
+      </Reveal>
 
       <div className="mt-14 space-y-16">
         {projects.map((project, i) => (
+          <Reveal key={project.id}>
           <article
-            key={project.id}
             aria-labelledby={`project-${project.id}`}
             className="grid items-center gap-8 lg:grid-cols-2"
           >
@@ -85,9 +88,11 @@ export default function ReferencesPage({
               </dl>
             </div>
           </article>
+          </Reveal>
         ))}
       </div>
 
+      <Reveal>
       <section
         aria-labelledby="ref-cta"
         className="mt-20 rounded-2xl border border-border/70 bg-muted/40 p-6 text-center sm:p-10"
@@ -105,6 +110,7 @@ export default function ReferencesPage({
           {t("cta.button")}
         </Button>
       </section>
+      </Reveal>
     </div>
   );
 }

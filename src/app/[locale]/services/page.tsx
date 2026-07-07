@@ -8,6 +8,7 @@ import {
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
+import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 
@@ -34,15 +35,18 @@ export default function ServicesPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-      <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-        {t("intro")}
-      </p>
+      <Reveal>
+        <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+          {t("title")}
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          {t("intro")}
+        </p>
+      </Reveal>
 
       <div className="mt-14 space-y-6">
         {/* Websites */}
+        <Reveal>
         <section
           aria-labelledby="svc-websites"
           className="rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
@@ -69,8 +73,10 @@ export default function ServicesPage({
             ))}
           </ul>
         </section>
+        </Reveal>
 
         {/* Custom systems */}
+        <Reveal>
         <section
           aria-labelledby="svc-systems"
           className="rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
@@ -97,8 +103,10 @@ export default function ServicesPage({
             ))}
           </ul>
         </section>
+        </Reveal>
 
         {/* Process improvement — Pillar B, confident */}
+        <Reveal>
         <section
           aria-labelledby="svc-process"
           className="rounded-2xl bg-brand-deep p-6 text-white sm:p-10"
@@ -128,9 +136,11 @@ export default function ServicesPage({
             ))}
           </ul>
         </section>
+        </Reveal>
       </div>
 
       {/* Pricing CTA — no prices in v1 */}
+      <Reveal>
       <section
         aria-labelledby="svc-pricing"
         className="mt-14 rounded-2xl border border-border/70 bg-muted/40 p-6 text-center sm:p-10"
@@ -148,6 +158,7 @@ export default function ServicesPage({
           {t("pricing.button")}
         </Button>
       </section>
+      </Reveal>
     </div>
   );
 }

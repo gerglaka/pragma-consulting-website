@@ -52,3 +52,18 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Fact:** Internal route names are English (`/[locale]/services` etc.); localized public slugs (`/hu/szolgaltatasok`, `/sk/sluzby`) are rewritten by the next-intl proxy, and internal-name URLs 307-redirect to the localized slug.
 
 - **Follow-up needed:** real contact email address + Resend domain verification before go-live; SK native review; real screenshots for references.
+
+## 2026-07-07 — Phase 2 design & polish
+
+- **Decided:** Logo = "Pragma" wordmark (Space Grotesk) + minimal enso mark: open circle stroke in `currentColor`/primary with a small gold square inside (`src/components/layout/logo.tsx`). Inline SVG, scales with text, works in both themes.
+  **Rejected:** labyrinth mark (too busy at 32px), image-file logo (inline SVG inherits theme colors for free).
+
+- **Decided:** Scroll reveals via a single `Reveal` client component (`motion/react`, `whileInView`, `once: true`, 24px rise, 0.5s ease-out). `useReducedMotion` disables the initial offset entirely — reduced-motion users see content instantly.
+  **Rejected:** per-section bespoke animations (inconsistent, more JS), animating on every scroll (distracting).
+
+- **Decided:** Desktop nav + header CTA show at `lg:` (1024px), not `md:` (768px); mobile sheet menu covers everything below `lg:`.
+  **Why:** HU nav labels + "Kérjen ajánlatot" CTA overflowed the 768px viewport by 31px — the HU-length risk from CLAUDE.md, caught by the checker. See ERRORS.md.
+
+- **Decided:** Hover micro-interactions on cards: border-primary tint + shadow + 1px lift, `motion-safe:` gated. Gold reserved for final-CTA button and Pillar B accents only.
+
+- **Fact:** `scripts/check-pages.mjs` added — spawns system Chromium, checks every page × locale × 375/768/1440px for horizontal overflow + console errors. Phase 2 exit state: 45/45 checks pass, `npm run build` clean.
