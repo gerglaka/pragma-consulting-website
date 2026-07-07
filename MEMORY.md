@@ -88,3 +88,9 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided:** Skip-to-content link added (localized, `a11y.skipToContent`), `main` has `id="content"`. Generic "Learn more"-type link texts replaced with descriptive ones in all locales (Lighthouse SEO flagged EN).
 
 - **Fact:** Phase 3 exit state: Lighthouse mobile homepage hu 91 / sk 91 / en 96 performance, 100/100/100 a11y/BP/SEO on all three; 45/45 page checks; build + tsc + eslint clean. Lab LCP (~3.3s) is dominated by a Lantern simulated-throttling artifact that pins LCP to webfont arrival even with `font-display: swap`; real users see fallback text at ~1s, and production CDN TTFB will further improve field scores.
+
+## 2026-07-07 — Phase 4 handover
+
+- **Decided:** README rewritten as the handover doc: run locally, edit copy (message JSONs + slugs + projects), swap DeviceFrame → next/image screenshots, env vars, Vercel deploy steps, verification commands. `.env.example` added.
+- **Fact:** Final verification (Checkpoint 2): build 0 errors; 45/45 page×locale×viewport checks; Lighthouse hu 91/100/100/100, sk 91/100/100/100, en 96/100/100/100; contact API valid/invalid/honeypot paths verified; zero MISSING_MESSAGE; keyboard tab order correct (skip link first, visible focus styles, honeypot excluded).
+- **Not done on purpose (awaiting Gergő):** deploy/push — never without explicit yes; real contact email + Resend domain; SK native review; real screenshots.

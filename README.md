@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pragma — website
 
-## Getting Started
+Trilingual (HU / SK / EN) marketing site for Pragma, built with Next.js 16, Tailwind CSS v4, shadcn/ui, Motion, next-intl and Resend. No database, no CMS — all content lives in this repository.
 
-First, run the development server:
+## Run locally
+
+Requirements: Node 20+ and npm.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The contact form works without any configuration: if `RESEND_API_KEY` is not set, submissions are logged to the server console instead of being emailed (see Environment variables below).
 
-## Learn More
+## Editing copy
 
-To learn more about Next.js, take a look at the following resources:
+Every visible string lives in one of three message files:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| File | Language |
+|---|---|
+| `messages/hu.json` | Hungarian (default locale) |
+| `messages/sk.json` | Slovak — **still needs native review** (see the `_note` key) |
+| `messages/en.json` | English |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit the JSON values, keep the keys identical across all three files. Nothing is hardcoded in components.
 
-## Deploy on Vercel
+Other content locations:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Localized URL slugs** — `src/i18n/routing.ts` (`pathnames`). Change a slug in one place and navigation, hreflang, sitemap and OG URLs all follow.
+- **Reference projects** (order, gradient colors) — `src/content/projects.ts`; their text is under the `projects.*` keys in the message files.
+- **Metadata / SEO text** — `meta.*` and each page's `metaTitle` / `metaDescription` keys in the message files.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Swapping in real portfolio screenshots
+
+The references currently use `src/components/device-frame.tsx` — a CSS-only browser mockup with a brand gradient (intentionally not fake screenshots). To use real images:
+
+1. Put the screenshots in `public/references/` (e.g. `restaurant.webp`), ideally 1600×1000 or similar 16:10.
+2. In `src/app/[locale]/references/page.tsx` and `src/app/[locale]/page.tsx`, replace the `<DeviceFrame …>` usage with `next/image`:
+
+   ```tsx
+   import Image from "next/image";
+
+   <Image
+     src="/references/restaurant.webp"
+     alt="…" // add a localized alt key to the message files
+     width={1600}
+     height={1000}
+     className="rounded-xl border border-border/70"
+   />
+   ```
+
+3. Add localized `alt` texts to the message files (e.g. `projects.restaurant.imageAlt`).
+
+## Environment variables
+
+Copy-paste template:
+
+```bash
+# Email delivery (contact form). Without this, submissions are logged to console.
+RESEND_API_KEY=
+
+# Where contact form submissions are sent. Falls back to Resend's test inbox.
+CONTACT_TO_EMAIL=
+
+# Verified sender. Falls back to "Pragma <onboarding@resend.dev>" (Resend's
+# onboarding sender — replace after verifying your domain in Resend).
+CONTACT_FROM_EMAIL=
+
+# Canonical origin used for hreflang, sitemap, OG URLs and JSON-LD.
+# Set this to the production domain, no trailing slash.
+NEXT_PUBLIC_SITE_URL=
+```
+
+Before go-live: verify the sending domain in Resend and set a real `CONTACT_TO_EMAIL`.
+
+## Deploying to Vercel
+
+1. Push the repository to GitHub (or GitLab/Bitbucket).
+2. In Vercel: **Add New → Project**, import the repo. Framework preset "Next.js" is detected automatically — no build settings to change.
+3. Add the four environment variables above (Production scope). `NEXT_PUBLIC_SITE_URL` must be the final domain, e.g. `https://example.com`.
+4. Deploy, then add the custom domain under **Settings → Domains**.
+
+The site is fully static except the `/api/contact` route, so any Node 20 host works too (`npm run build && npm run start`).
+
+## Verification
+
+- `npm run build` — must pass with zero errors.
+- `node scripts/check-pages.mjs [baseUrl]` — loads every page × locale × viewport (375 / 768 / 1440 px) in headless Chromium and fails on horizontal overflow or any browser console error. Set `CHROME_PATH` if Chromium is not at `/usr/bin/chromium-browser`.
+- Lighthouse (mobile) against a production build, e.g. `npx lighthouse http://localhost:3199/hu`.
+
+## Project structure
+
+```
+messages/            hu.json, sk.json, en.json — all copy
+src/app/[locale]/    pages (home, services, references, about, contact)
+src/app/api/contact/ Resend email endpoint (honeypot + validation)
+src/components/      UI components (header, footer, forms, reveals, …)
+src/content/         reference project definitions
+src/i18n/            locales, localized slugs, navigation helpers
+src/lib/seo.ts       canonical/hreflang/OG metadata helper
+scripts/             check-pages.mjs verification script
+MEMORY.md            decision log
+ERRORS.md            hard-won lessons (read before debugging)
+```
