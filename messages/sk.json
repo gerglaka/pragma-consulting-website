@@ -88,6 +88,9 @@
       "title": "Povedzte nám, čo potrebujete.",
       "description": "Napíšte nám pár slov o svojom projekte — pripravíme nezáväznú ponuku s fixnou cenou.",
       "button": "Nezáväzná ponuka"
+    },
+    "partners": {
+      "title": "Naši partneri"
     }
   },
   "servicesPage": {
@@ -195,6 +198,22 @@
       "title": "Spolupracujme.",
       "description": "Napíšte nám — prvá konzultácia je bezplatná a nezáväzná.",
       "button": "Nezáväzná ponuka"
+    },
+    "team": {
+      "title": "Náš tím",
+      "intro": "Ľudia, ktorí stoja za značkou Pragma.",
+      "m1": {
+        "name": "Meno člena tímu",
+        "role": "Pozícia"
+      },
+      "m2": {
+        "name": "Meno člena tímu",
+        "role": "Pozícia"
+      },
+      "m3": {
+        "name": "Meno člena tímu",
+        "role": "Pozícia"
+      }
     }
   },
   "contactPage": {

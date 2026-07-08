@@ -8,10 +8,12 @@ import {
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { use } from "react";
 import { DeviceFrame } from "@/components/device-frame";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
+import { partners } from "@/content/partners";
 import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -235,6 +237,55 @@ export default function HomePage({
             </p>
           </Reveal>
         </div>
+      </section>
+
+      {/* Partners */}
+      <section
+        aria-labelledby="home-partners"
+        className="mx-auto max-w-6xl px-4 py-16 sm:px-6"
+      >
+        <Reveal>
+          <h2
+            id="home-partners"
+            className="text-center text-sm font-semibold tracking-widest text-muted-foreground uppercase"
+          >
+            {t("partners.title")}
+          </h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            {partners.map((partner) => {
+              const mark = partner.logo ? (
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={160}
+                  height={64}
+                  className="h-12 w-auto opacity-80 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0 sm:h-14"
+                />
+              ) : (
+                <span className="flex h-14 min-w-36 items-center justify-center rounded-xl border border-dashed border-border bg-card px-6 font-display text-lg font-semibold text-muted-foreground/70">
+                  {partner.name}
+                </span>
+              );
+              return (
+                <li key={partner.id}>
+                  {partner.url ? (
+                    <a
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {mark}
+                    </a>
+                  ) : (
+                    mark
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </Reveal>
       </section>
 
       {/* Final CTA */}

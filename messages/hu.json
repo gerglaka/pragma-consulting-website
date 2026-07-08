@@ -87,6 +87,9 @@
       "title": "Beszéljük meg, mire van szüksége.",
       "description": "Írjon nekünk röviden a projektjéről — kötelezettségmentes, fix árú ajánlatot készítünk.",
       "button": "Kérjen ajánlatot"
+    },
+    "partners": {
+      "title": "Partnereink"
     }
   },
   "servicesPage": {
@@ -194,6 +197,22 @@
       "title": "Dolgozzunk együtt.",
       "description": "Írjon nekünk — az első konzultáció ingyenes és kötelezettségmentes.",
       "button": "Kérjen ajánlatot"
+    },
+    "team": {
+      "title": "Csapatunk",
+      "intro": "A Pragma mögött álló emberek.",
+      "m1": {
+        "name": "Csapattag neve",
+        "role": "Pozíció"
+      },
+      "m2": {
+        "name": "Csapattag neve",
+        "role": "Pozíció"
+      },
+      "m3": {
+        "name": "Csapattag neve",
+        "role": "Pozíció"
+      }
     }
   },
   "contactPage": {

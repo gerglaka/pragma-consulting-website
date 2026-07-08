@@ -101,3 +101,10 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Next session:** Gergő reviews locally (`npm run build && npm run start -- -p 3199`, or phone via LAN IP). Then he decides: Vercel preview deploy (no domain/env needed) or straight to launch prep. Do NOT deploy or push without his explicit yes.
 - **Open items for go-live:** RESEND_API_KEY + CONTACT_TO_EMAIL/CONTACT_FROM_EMAIL (Resend domain verification), NEXT_PUBLIC_SITE_URL, SK native review, real reference screenshots.
 - **Note:** the local server on port 3199 was started from this session and may not survive a reboot/VSCode close — just restart it.
+
+## 2026-07-08 — Partners strip + Team section (placeholders)
+
+- **Decided (Gergő):** build both sections with clearly-marked placeholders first — 3 partners, 3 team members — so the design can be previewed before real names/logos/photos exist. No invented names (CLAUDE.md: no fake team/client data).
+- **Decided (Gergő):** Partners = logo strip on the homepage between "How we work" and the final CTA. Team = photo cards (photo, name, role) on the About page between the facts grid and the CTA.
+- **Decided:** content lives in `src/content/partners.ts` (`{id, name, logo?, url?}`) and `src/content/team.ts` (`{id, photo?}`); all visible text (partner section title, team names/roles) in the message files under `home.partners.*` / `aboutPage.team.*`. Entries without `logo`/`photo` render placeholder marks (dashed wordmark box / neutral avatar). Swap instructions documented in README ("Partners and team (placeholders)").
+- **Fact:** verification after the feature: build 0 errors, 45/45 page×locale×viewport checks, both sections render in all three locales.

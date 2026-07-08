@@ -87,6 +87,9 @@
       "title": "Let's talk about what you need.",
       "description": "Tell us a few words about your project — we'll prepare a no-obligation, fixed-price quote.",
       "button": "Get a quote"
+    },
+    "partners": {
+      "title": "Our partners"
     }
   },
   "servicesPage": {
@@ -194,6 +197,22 @@
       "title": "Let's work together.",
       "description": "Write to us — the first consultation is free and comes with no obligation.",
       "button": "Get a quote"
+    },
+    "team": {
+      "title": "Our team",
+      "intro": "The people behind Pragma.",
+      "m1": {
+        "name": "Team member name",
+        "role": "Role"
+      },
+      "m2": {
+        "name": "Team member name",
+        "role": "Role"
+      },
+      "m3": {
+        "name": "Team member name",
+        "role": "Role"
+      }
     }
   },
   "contactPage": {

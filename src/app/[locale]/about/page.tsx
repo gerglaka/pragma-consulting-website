@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { AwardIcon, BadgeEuroIcon, LanguagesIcon } from "lucide-react";
+import {
+  AwardIcon,
+  BadgeEuroIcon,
+  LanguagesIcon,
+  UserRoundIcon,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { use } from "react";
 import { JsonLd } from "@/components/json-ld";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
+import { team } from "@/content/team";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
@@ -82,6 +89,53 @@ export default function AboutPage({
           </Reveal>
         ))}
       </div>
+
+      {/* Team */}
+      <section aria-labelledby="about-team" className="mt-14">
+        <Reveal>
+          <h2
+            id="about-team"
+            className="font-display text-3xl font-bold tracking-tight"
+          >
+            {t("team.title")}
+          </h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            {t("team.intro")}
+          </p>
+        </Reveal>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((member, i) => (
+            <Reveal key={member.id} delay={i * 0.08}>
+              <article className="h-full overflow-hidden rounded-2xl border border-border/70 bg-card transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1">
+                {member.photo ? (
+                  <Image
+                    src={member.photo}
+                    alt={t(`team.${member.id}.name`)}
+                    width={800}
+                    height={1000}
+                    className="aspect-4/5 w-full object-cover"
+                  />
+                ) : (
+                  <div
+                    aria-hidden="true"
+                    className="flex aspect-4/5 w-full items-center justify-center bg-muted"
+                  >
+                    <UserRoundIcon className="size-16 text-muted-foreground/50" />
+                  </div>
+                )}
+                <div className="p-5">
+                  <h3 className="font-display text-lg font-semibold">
+                    {t(`team.${member.id}.name`)}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {t(`team.${member.id}.role`)}
+                  </p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
       <Reveal>
       <section

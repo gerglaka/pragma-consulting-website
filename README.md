@@ -59,6 +59,24 @@ The references currently use `src/components/device-frame.tsx` — a CSS-only br
 
 3. Add localized `alt` texts to the message files (e.g. `projects.restaurant.imageAlt`).
 
+## Partners and team (placeholders)
+
+Both sections currently show clearly-marked placeholders.
+
+**Partner logos** (homepage strip) — `src/content/partners.ts`:
+
+1. Put the logo in `public/partners/` (SVG preferred, or a ~320×128 PNG/WebP).
+2. Set the entry's `name` (used as alt text), `logo: "/partners/<file>"` and optional `url`.
+3. Add more entries to the array anytime — the strip wraps automatically.
+
+Entries without a `logo` render as a dashed text box (placeholder look).
+
+**Team members** (About page) — `src/content/team.ts` + message files:
+
+1. Names and roles live under `aboutPage.team.<id>` in `messages/{hu,sk,en}.json` (names are usually identical in all three; roles are translated).
+2. Photos: put a portrait (~4:5, e.g. 800×1000) in `public/team/` and set `photo: "/team/<file>"` on the member entry. Without a photo, a neutral avatar placeholder is shown.
+3. To add a member: new entry in `team.ts` (e.g. `{ id: "m4", photo: … }`) + `aboutPage.team.m4` keys in all three message files.
+
 ## Environment variables
 
 Copy-paste template:
