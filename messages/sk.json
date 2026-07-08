@@ -178,8 +178,8 @@
     "title": "O nás",
     "p1": "Pragma je grécke slovo: znamená čin, skutok. Nie je to náhoda — veríme, že dobré riešenie sa meria fungujúcimi nástrojmi, nie prezentáciami.",
     "p2": "Pragma je malá, nezávislá konzultačná dielňa z maďarsko-slovenského pohraničia. Pracujeme pre malé a stredné firmy a rodinné podniky — v troch jazykoch: po maďarsky, slovensky a anglicky.",
-    "p3": "Budeme úprimní: sme malí. Pre vás to znamená, že za faktúrou nie je reťaz account manažérov ani predražená organizácia — hovoríte priamo s tým, kto prácu vykonáva. Preto sme rýchli, flexibilní a cenovo dostupní.",
-    "p4": "Naše služby zlepšovania procesov sú podložené certifikáciou CSSC Lean Six Sigma Green Belt.",
+    "p3": "Náš cieľ je jednoduchý: chceme, aby podniky v našom regióne napredovali. Tam, kde dnes každodenný chod držia papiere, zošity a roztrúsené tabuľky, majú zajtra fungovať digitálne nástroje, ktoré firme skutočne sedia — nie naopak.",
+    "p4": "Robíme to prakticky: bez zbytočného žargónu, za fixnú cenu a vždy hovoríte priamo s tým, kto prácu skutočne robí.",
     "facts": {
       "languages": {
         "title": "3 jazyky",
@@ -189,9 +189,9 @@
         "title": "Fixné ceny",
         "description": "Naše ponuky majú vždy fixnú cenu — žiadne skryté náklady."
       },
-      "credential": {
-        "title": "Green Belt",
-        "description": "Certifikácia CSSC Lean Six Sigma Green Belt."
+      "local": {
+        "title": "Lokálne korene",
+        "description": "Pracujeme pre podniky maďarsko-slovenského pohraničia."
       }
     },
     "cta": {

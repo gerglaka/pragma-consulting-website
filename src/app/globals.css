@@ -101,6 +101,15 @@
   }
 }
 
+/* Theme switch: circular reveal driven by the View Transitions API
+   (see theme-toggle.tsx). Disable the default cross-fade so only the
+   clip-path circle animates. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 /* CSS-only entrance for above-the-fold content (LCP-safe: runs before
    hydration, unlike JS scroll reveals). Starts at partial opacity, not 0 —
    content is readable from the first paint and stays LCP-eligible

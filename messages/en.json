@@ -177,8 +177,8 @@
     "title": "About",
     "p1": "Pragma is a Greek word: it means deed, action. That's no accident — we believe a good solution is measured in working tools, not presentations.",
     "p2": "Pragma is a small, independent consultancy from the Hungarian–Slovak border region. We work with small and medium businesses and family companies — in three languages: Hungarian, Slovak and English.",
-    "p3": "Let's be honest: we are small. For you, that means no chain of account managers and no overpriced organisation behind the invoice — you talk directly with the person doing the work. That's why we're fast, flexible and affordable.",
-    "p4": "Our process improvement services are backed by a CSSC Lean Six Sigma Green Belt certification.",
+    "p3": "Our goal is simple: we want the businesses of our region to move forward. Where paper, notebooks and scattered spreadsheets run the day-to-day today, tomorrow there should be digital tools that genuinely fit the company — not the other way around.",
+    "p4": "We do this pragmatically: no unnecessary jargon, fixed prices, and you always talk directly with the person actually doing the work.",
     "facts": {
       "languages": {
         "title": "3 languages",
@@ -188,9 +188,9 @@
         "title": "Fixed prices",
         "description": "Our quotes are always fixed-price — no hidden costs."
       },
-      "credential": {
-        "title": "Green Belt",
-        "description": "CSSC Lean Six Sigma Green Belt certification."
+      "local": {
+        "title": "Local roots",
+        "description": "We work for the businesses of the Hungarian–Slovak border region."
       }
     },
     "cta": {

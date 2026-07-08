@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import {
-  AwardIcon,
   BadgeEuroIcon,
   LanguagesIcon,
+  MapPinIcon,
   UserRoundIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -35,7 +35,7 @@ export async function generateMetadata({
 const FACTS = [
   { key: "languages", Icon: LanguagesIcon },
   { key: "pricing", Icon: BadgeEuroIcon },
-  { key: "credential", Icon: AwardIcon },
+  { key: "local", Icon: MapPinIcon },
 ] as const;
 
 export default function AboutPage({

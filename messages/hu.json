@@ -177,8 +177,8 @@
     "title": "Rólunk",
     "p1": "A pragma görög szó: tettet, cselekvést jelent. Nem véletlenül lett ez a nevünk — abban hiszünk, hogy a jó megoldás nem prezentációkban, hanem működő eszközökben mérhető.",
     "p2": "A Pragma kis, független tanácsadó műhely a magyar–szlovák határrégióból. Kis- és középvállalkozásoknak és családi cégeknek dolgozunk — három nyelven: magyarul, szlovákul és angolul.",
-    "p3": "Őszinték leszünk: kicsik vagyunk. Önnek ez azt jelenti, hogy nincs ügyfélmenedzser-láncolat és túlárazott szervezet a számla mögött — közvetlenül azzal beszél, aki a munkát végzi. Ezért vagyunk gyorsak, rugalmasak és megfizethetők.",
-    "p4": "A folyamatfejlesztési szolgáltatásaink mögött CSSC Lean Six Sigma Green Belt minősítés áll.",
+    "p3": "A célunk egyszerű: szeretnénk, ha a régió vállalkozásai előrébb lépnének. Ahol ma papír, füzet és szétszórt táblázatok viszik a mindennapokat, ott holnap olyan digitális eszközök dolgozzanak, amelyek tényleg a céghez igazodnak — nem fordítva.",
+    "p4": "Ezt praktikusan tesszük: felesleges szakzsargon nélkül, fix áron, és mindig azzal beszél, aki a munkát ténylegesen végzi.",
     "facts": {
       "languages": {
         "title": "3 nyelv",
@@ -188,9 +188,9 @@
         "title": "Fix árak",
         "description": "Az ajánlatunk mindig fix áras — nincsenek rejtett költségek."
       },
-      "credential": {
-        "title": "Green Belt",
-        "description": "CSSC Lean Six Sigma Green Belt minősítés."
+      "local": {
+        "title": "Helyi gyökerek",
+        "description": "A magyar–szlovák határrégió vállalkozásaiért dolgozunk."
       }
     },
     "cta": {
