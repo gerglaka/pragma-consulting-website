@@ -108,3 +108,10 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided (Gergő):** Partners = logo strip on the homepage between "How we work" and the final CTA. Team = photo cards (photo, name, role) on the About page between the facts grid and the CTA.
 - **Decided:** content lives in `src/content/partners.ts` (`{id, name, logo?, url?}`) and `src/content/team.ts` (`{id, photo?}`); all visible text (partner section title, team names/roles) in the message files under `home.partners.*` / `aboutPage.team.*`. Entries without `logo`/`photo` render placeholder marks (dashed wordmark box / neutral avatar). Swap instructions documented in README ("Partners and team (placeholders)").
 - **Fact:** verification after the feature: build 0 errors, 45/45 page×locale×viewport checks, both sections render in all three locales.
+
+## 2026-07-08 — Light-mode tint, theme animation, About copy correction
+
+- **Decided (Gergő):** light mode background darkened to `#f4f1e9` (from the CLAUDE.md `#faf8f3` — "too bright"); cards/muted/border/input followed one step so surface contrast holds.
+- **Decided (Gergő):** theme switch animates as a circle expanding from the toggle button (View Transitions API `clip-path` on `::view-transition-new(root)`); instant fallback when unsupported or `prefers-reduced-motion`.
+- **IMPORTANT correction (Gergő):** Pragma does NOT hold a CSSC Lean Six Sigma Green Belt — CLAUDE.md is wrong on this. All certification claims removed (About p4, Green Belt fact card → "Local roots"). Do not reintroduce. "Lean Six Sigma methodology" wording in the process-improvement descriptions was kept (methodology, not a credential) — flag to Gergő if in doubt.
+- **Decided (Gergő):** About p3/p4 refocused on the mission: moving the region's businesses forward, off paper/scattered spreadsheets onto digital tools that fit them (his essence, my wording — SK still needs native review).
