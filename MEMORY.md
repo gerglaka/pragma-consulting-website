@@ -115,3 +115,9 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 - **Decided (Gergő):** theme switch animates as a circle expanding from the toggle button (View Transitions API `clip-path` on `::view-transition-new(root)`); instant fallback when unsupported or `prefers-reduced-motion`.
 - **IMPORTANT correction (Gergő):** Pragma does NOT hold a CSSC Lean Six Sigma Green Belt — CLAUDE.md is wrong on this. All certification claims removed (About p4, Green Belt fact card → "Local roots"). Do not reintroduce. "Lean Six Sigma methodology" wording in the process-improvement descriptions was kept (methodology, not a credential) — flag to Gergő if in doubt.
 - **Decided (Gergő):** About p3/p4 refocused on the mission: moving the region's businesses forward, off paper/scattered spreadsheets onto digital tools that fit them (his essence, my wording — SK still needs native review).
+
+## 2026-07-08 — 4th reference (pool plant) + live-site links
+
+- **Fact (Gergő):** real 4th reference added — process improvement at a pool manufacturing plant: process mapping, breakdown of step dependencies and lost time, plant layout recommendations. Anonymized like the others; no invented metrics.
+- **Decided:** projects get an optional `url` field → references page shows a localized "view live site" external link when set. Policy (agreed with Gergő): link public websites only (with client OK); private/internal software (time-tracking, restaurant system) stays unlinked — the problem→solution→result story is the presentation. No URLs set yet; Gergő will provide them.
+- **Decided:** homepage references strip shows `projects.slice(0, 3)` to keep the 3-col grid balanced; `/references` shows all. If a 5th+ reference arrives, reconsider which three to feature.

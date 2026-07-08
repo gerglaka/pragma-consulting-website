@@ -130,9 +130,10 @@
   },
   "referencesPage": {
     "metaTitle": "Referenciák — Pragma",
-    "metaDescription": "Valós, elkészült projektek: online ételrendelő rendszer, céges weboldalak, munkaidő-nyilvántartó szoftver.",
+    "metaDescription": "Valós, elkészült projektek: online ételrendelő rendszer, céges weboldalak, munkaidő-nyilvántartó szoftver, gyártási folyamatfejlesztés.",
     "title": "Referenciák",
     "intro": "Minden itt szereplő projekt valós, elkészült munka. Az ügyfelek nevét kérésre, engedélyükkel adjuk ki.",
+    "visit": "Weboldal megtekintése",
     "problemLabel": "A kiindulás",
     "solutionLabel": "Amit építettünk",
     "resultLabel": "Az eredmény",
@@ -169,6 +170,15 @@
       "problem": "A munkaidő nyilvántartása papíron és táblázatokban történt — a hónap végi összesítés lassú volt, és tele volt hibalehetőséggel.",
       "solution": "Egyszerű munkaidő-nyilvántartó szoftver: a dolgozók rögzítik az idejüket, a vezetőség azonnal látja az összesítéseket, és exportálhatja azokat a bérszámfejtéshez.",
       "result": "A hóvégi adminisztráció ideje töredékére csökkent, az adatok pontosak és bármikor visszakereshetők."
+    },
+    "manufacturing": {
+      "tag": "Folyamatfejlesztés",
+      "title": "Folyamatfejlesztés medencegyártó üzemben",
+      "client": "Egy medencegyártó megbízásából",
+      "oneliner": "Feltérképezett gyártási folyamatok: átlátható függőségek, kimutatott időveszteségek, átgondoltabb üzemelrendezés.",
+      "problem": "A gyártás az évek alatt szervesen nőtt, dokumentált folyamatok nélkül — nem látszott tisztán, melyik lépés min múlik, hol vész el idő, és az üzem elrendezése is menet közben alakult ki.",
+      "solution": "Végigjártuk és feltérképeztük a teljes gyártási folyamatot: folyamattérkép, a lépések közötti függőségek és az időveszteségek kimutatása, valamint konkrét javaslatok az üzem elrendezésére.",
+      "result": "A vezetés feketén-fehéren látja, hol vész el idő és mi mitől függ — a fejlesztési döntések megérzés helyett tényekre épülhetnek."
     }
   },
   "aboutPage": {

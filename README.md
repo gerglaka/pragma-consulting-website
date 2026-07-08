@@ -35,7 +35,7 @@ Edit the JSON values, keep the keys identical across all three files. Nothing is
 Other content locations:
 
 - **Localized URL slugs** — `src/i18n/routing.ts` (`pathnames`). Change a slug in one place and navigation, hreflang, sitemap and OG URLs all follow.
-- **Reference projects** (order, gradient colors) — `src/content/projects.ts`; their text is under the `projects.*` keys in the message files.
+- **Reference projects** (order, gradient colors) — `src/content/projects.ts`; their text is under the `projects.*` keys in the message files. Set the optional `url` on a project to show a "view live site" link on the references page (public websites only — leave it off for private/internal systems). The homepage strip shows the first three projects; the references page shows all of them.
 - **Metadata / SEO text** — `meta.*` and each page's `metaTitle` / `metaDescription` keys in the message files.
 
 ## Swapping in real portfolio screenshots

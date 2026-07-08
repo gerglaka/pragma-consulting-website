@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -104,6 +105,17 @@ export default function ReferencesPage({
                   </dd>
                 </div>
               </dl>
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-1 font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  {t("visit")}
+                  <ArrowUpRightIcon aria-hidden="true" className="size-4" />
+                </a>
+              )}
             </div>
           </article>
           </Reveal>

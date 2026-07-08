@@ -165,7 +165,8 @@ export default function HomePage({
           </p>
         </Reveal>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {projects.map((project, i) => (
+          {/* Home strip shows the first three; the full list lives on /references */}
+          {projects.slice(0, 3).map((project, i) => (
             <Reveal key={project.id} delay={i * 0.08}>
               <Link
                 href="/references"

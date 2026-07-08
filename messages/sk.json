@@ -131,9 +131,10 @@
   },
   "referencesPage": {
     "metaTitle": "Referencie — Pragma",
-    "metaDescription": "Reálne, dokončené projekty: online systém objednávania jedla, firemné weby, softvér na evidenciu pracovného času.",
+    "metaDescription": "Reálne, dokončené projekty: online systém objednávania jedla, firemné weby, softvér na evidenciu pracovného času, zlepšovanie výrobných procesov.",
     "title": "Referencie",
     "intro": "Každý projekt na tejto stránke je reálna, dokončená práca. Mená klientov poskytneme na požiadanie, s ich súhlasom.",
+    "visit": "Pozrieť web",
     "problemLabel": "Východisková situácia",
     "solutionLabel": "Čo sme postavili",
     "resultLabel": "Výsledok",
@@ -170,6 +171,15 @@
       "problem": "Pracovný čas sa evidoval na papieri a v tabuľkách — mesačná uzávierka bola pomalá a plná priestoru na chyby.",
       "solution": "Jednoduchý softvér na evidenciu pracovného času: pracovníci zapisujú svoje hodiny, vedenie okamžite vidí súhrny a môže ich exportovať pre mzdy.",
       "result": "Mesačná administratíva trvá zlomok pôvodného času a údaje sú presné a kedykoľvek dohľadateľné."
+    },
+    "manufacturing": {
+      "tag": "Zlepšovanie procesov",
+      "title": "Zlepšovanie procesov vo výrobni bazénov",
+      "client": "Pre výrobcu bazénov",
+      "oneliner": "Zmapované výrobné procesy: prehľadné závislosti, vyčíslené časové straty, premyslenejšie usporiadanie prevádzky.",
+      "problem": "Výroba roky rástla organicky, bez zdokumentovaných procesov — nebolo jasné, ktorý krok od čoho závisí, kde sa stráca čas a prečo je prevádzka usporiadaná tak, ako je.",
+      "solution": "Prešli sme a zmapovali celý výrobný proces: procesná mapa, rozbor závislostí medzi krokmi a časových strát, plus konkrétne odporúčania na usporiadanie prevádzky.",
+      "result": "Vedenie vidí čierne na bielom, kde sa stráca čas a čo od čoho závisí — rozhodnutia o zlepšeniach sa môžu opierať o fakty namiesto pocitov."
     }
   },
   "aboutPage": {

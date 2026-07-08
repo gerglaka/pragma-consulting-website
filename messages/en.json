@@ -130,9 +130,10 @@
   },
   "referencesPage": {
     "metaTitle": "References — Pragma",
-    "metaDescription": "Real, completed projects: online food ordering system, business websites, worker time-tracking software.",
+    "metaDescription": "Real, completed projects: online food ordering system, business websites, worker time-tracking software, manufacturing process improvement.",
     "title": "References",
     "intro": "Every project here is real, completed work. Client names are shared on request, with their permission.",
+    "visit": "View live site",
     "problemLabel": "The starting point",
     "solutionLabel": "What we built",
     "resultLabel": "The result",
@@ -169,6 +170,15 @@
       "problem": "Working hours were tracked on paper and in spreadsheets — the end-of-month summary was slow and full of room for error.",
       "solution": "Simple time-tracking software: workers log their hours, management sees summaries instantly and can export them for payroll.",
       "result": "End-of-month admin now takes a fraction of the time, and the data is accurate and searchable at any moment."
+    },
+    "manufacturing": {
+      "tag": "Process improvement",
+      "title": "Process improvement in a pool manufacturing plant",
+      "client": "For a pool manufacturer",
+      "oneliner": "Mapped production processes: clear dependencies, measured lost time, a smarter plant layout.",
+      "problem": "Production had grown organically over the years with no documented processes — it wasn't clear which step depended on what, where time was being lost, or why the plant was arranged the way it was.",
+      "solution": "We walked and mapped the entire production process: a process map, a breakdown of dependencies between steps and of lost time, plus concrete recommendations for the plant layout.",
+      "result": "Management now sees in black and white where time is lost and what depends on what — improvement decisions can be based on facts instead of gut feeling."
     }
   },
   "aboutPage": {
