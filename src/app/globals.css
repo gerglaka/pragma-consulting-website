@@ -45,24 +45,24 @@
   --gold: #e8a020;
   --gold-foreground: #241b06;
 
-  /* Light mode: warm off-white, near-black text */
-  --background: #faf8f3;
+  /* Light mode: warm "dirty" off-white, near-black text */
+  --background: #f4f1e9;
   --foreground: #1a1b20;
-  --card: #fdfcf9;
+  --card: #fbf9f3;
   --card-foreground: #1a1b20;
-  --popover: #fdfcf9;
+  --popover: #fbf9f3;
   --popover-foreground: #1a1b20;
   --primary: #3b5bad;
   --primary-foreground: #ffffff;
-  --secondary: #e9ecf5;
+  --secondary: #e5e8f2;
   --secondary-foreground: #1a3a7a;
-  --muted: #f0eee7;
+  --muted: #eae7db;
   --muted-foreground: #5b5e68;
-  --accent: #f1eee6;
+  --accent: #ebe8dc;
   --accent-foreground: #1a1b20;
   --destructive: #c0392b;
-  --border: #e4e1d7;
-  --input: #dcd9cf;
+  --border: #ded9ca;
+  --input: #d5d1c2;
   --ring: #3b5bad;
   --radius: 0.625rem;
 }
