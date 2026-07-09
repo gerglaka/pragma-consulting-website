@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  type AbstractIntlMessages,
+  hasLocale,
+  NextIntlClientProvider,
+} from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { SpotlightEffect } from "@/components/spotlight-effect";
 import { ThemeProvider } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
 import { absoluteUrl, SITE_URL } from "@/lib/seo";
@@ -21,10 +30,14 @@ const inter = Inter({
   preload: false,
 });
 
+// display: "optional" — the preloaded file almost always arrives within the
+// short block window (no font flash at all); on very slow first visits the
+// metric-adjusted fallback stays instead of swapping mid-view. This also
+// stops the LCP hero headline from being re-timed to the font swap.
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin", "latin-ext"],
   variable: "--font-space-grotesk",
-  display: "swap",
+  display: "optional",
 });
 
 export function generateStaticParams() {
@@ -59,6 +72,19 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
 
+  // Ship only the namespaces client components actually use (header, nav,
+  // theme toggle, contact form) — embedding the full catalog in every HTML
+  // response measurably delays LCP on slow connections.
+  const messages = await getMessages({ locale });
+  const clientMessages: AbstractIntlMessages = {
+    header: messages.header,
+    nav: messages.nav,
+    theme: messages.theme,
+    contactPage: {
+      form: (messages.contactPage as AbstractIntlMessages).form,
+    },
+  };
+
   return (
     <html
       lang={locale}
@@ -72,7 +98,7 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>
+          <NextIntlClientProvider messages={clientMessages}>
             <a
               href="#content"
               className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
@@ -86,6 +112,7 @@ export default async function LocaleLayout({
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
+        <SpotlightEffect />
         <JsonLd
           data={{
             "@context": "https://schema.org",

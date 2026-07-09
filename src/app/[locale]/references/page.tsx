@@ -110,7 +110,7 @@ export default function ReferencesPage({
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-1 font-medium text-primary underline-offset-4 hover:underline"
+                  className="link-draw mt-6 inline-flex items-center gap-1 pb-0.5 font-medium text-primary"
                 >
                   {t("visit")}
                   <ArrowUpRightIcon aria-hidden="true" className="size-4" />
@@ -134,7 +134,7 @@ export default function ReferencesPage({
           {t("cta.description")}
         </p>
         <Button
-          className="mt-6 h-11 px-6 text-base"
+          className="btn-shimmer mt-6 h-11 px-6 text-base"
           render={<Link href="/contact" />}
         >
           {t("cta.button")}

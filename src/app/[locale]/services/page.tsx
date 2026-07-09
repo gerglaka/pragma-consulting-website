@@ -67,7 +67,7 @@ export default function ServicesPage({
         <Reveal>
         <section
           aria-labelledby="svc-websites"
-          className="rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
+          className="spotlight rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
         >
           <GlobeIcon aria-hidden="true" className="size-8 text-primary" />
           <h2
@@ -97,7 +97,7 @@ export default function ServicesPage({
         <Reveal>
         <section
           aria-labelledby="svc-systems"
-          className="rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
+          className="spotlight rounded-2xl border border-border/70 bg-card p-6 sm:p-10"
         >
           <DatabaseIcon aria-hidden="true" className="size-8 text-primary" />
           <h2
@@ -127,7 +127,7 @@ export default function ServicesPage({
         <Reveal>
         <section
           aria-labelledby="svc-process"
-          className="rounded-2xl bg-brand-deep p-6 text-white sm:p-10"
+          className="spotlight rounded-2xl bg-brand-deep p-6 text-white [--spot-color:rgba(255,255,255,0.09)] sm:p-10"
         >
           <BarChart3Icon aria-hidden="true" className="size-8 text-gold" />
           <p className="mt-4 text-sm font-medium text-gold">
@@ -170,7 +170,7 @@ export default function ServicesPage({
           {t("pricing.description")}
         </p>
         <Button
-          className="mt-6 h-11 px-6 text-base"
+          className="btn-shimmer mt-6 h-11 px-6 text-base"
           render={<Link href="/contact" />}
         >
           {t("pricing.button")}

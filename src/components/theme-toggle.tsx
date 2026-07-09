@@ -3,16 +3,22 @@
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { flushSync } from "react-dom";
 import { Button } from "@/components/ui/button";
+
+const emptySubscribe = () => () => {};
 
 export function ThemeToggle() {
   const t = useTranslations("theme");
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  // true after hydration, false during SSR — avoids a hydration mismatch
+  // on the icon without setState-in-effect.
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
 
   const toggle = (event: React.MouseEvent<HTMLElement>) => {
     const next = resolvedTheme === "dark" ? "light" : "dark";

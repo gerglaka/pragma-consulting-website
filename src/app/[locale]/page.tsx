@@ -11,7 +11,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { use } from "react";
 import { DeviceFrame } from "@/components/device-frame";
+import { HeroFlowLazy } from "@/components/hero-flow-lazy";
 import { Reveal } from "@/components/reveal";
+import { StepFlowLine } from "@/components/step-flow-line";
 import { Button } from "@/components/ui/button";
 import { partners } from "@/content/partners";
 import { projects } from "@/content/projects";
@@ -58,6 +60,7 @@ export default function HomePage({
           aria-hidden="true"
           className="pointer-events-none absolute -top-40 right-0 size-[36rem] rounded-full bg-primary/10 blur-3xl dark:bg-primary/15"
         />
+        <HeroFlowLazy />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
           <div className="animate-fade-up">
             <p className="flex items-center gap-3 text-sm font-semibold tracking-widest text-primary uppercase">
@@ -72,7 +75,7 @@ export default function HomePage({
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button
-                className="h-11 px-6 text-base"
+                className="btn-shimmer h-11 px-6 text-base"
                 render={<Link href="/contact" />}
               >
                 {t("hero.ctaPrimary")}
@@ -106,7 +109,7 @@ export default function HomePage({
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {PILLAR_A.map(({ key, Icon }, i) => (
             <Reveal key={key} delay={i * 0.08}>
-              <article className="flex h-full flex-col gap-3 rounded-2xl border border-border/70 bg-card p-6 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1 sm:p-8">
+              <article className="spotlight flex h-full flex-col gap-3 rounded-2xl border border-border/70 bg-card p-6 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1 sm:p-8">
                 <Icon aria-hidden="true" className="size-8 text-primary" />
                 <h3 className="font-display text-xl font-semibold">
                   {t(`services.${key}.title`)}
@@ -119,7 +122,7 @@ export default function HomePage({
           ))}
           {/* Pillar B — one confident card */}
           <Reveal className="md:col-span-3" delay={0.16}>
-            <article className="flex flex-col gap-3 rounded-2xl bg-brand-deep p-6 text-white transition-all duration-200 hover:shadow-lg motion-safe:hover:-translate-y-1 sm:p-8 md:flex-row md:items-center md:gap-8">
+            <article className="spotlight flex flex-col gap-3 rounded-2xl bg-brand-deep p-6 text-white transition-all duration-200 [--spot-color:rgba(255,255,255,0.09)] hover:shadow-lg motion-safe:hover:-translate-y-1 sm:p-8 md:flex-row md:items-center md:gap-8">
               <BarChart3Icon
                 aria-hidden="true"
                 className="size-8 shrink-0 text-gold"
@@ -170,7 +173,7 @@ export default function HomePage({
             <Reveal key={project.id} delay={i * 0.08}>
               <Link
                 href="/references"
-                className="group block h-full rounded-2xl border border-border/70 bg-card p-4 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1"
+                className="group spotlight block h-full rounded-2xl border border-border/70 bg-card p-4 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1"
               >
                 <DeviceFrame gradient={project.gradient} compact />
                 <p className="mt-4 text-xs font-medium tracking-wide text-primary uppercase">
@@ -212,26 +215,34 @@ export default function HomePage({
               {t("how.title")}
             </h2>
           </Reveal>
-          <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {(["step1", "step2", "step3", "step4"] as const).map((step, i) => (
-              <li key={step}>
-                <Reveal delay={i * 0.08} className="flex h-full flex-col gap-2">
-                  <span
-                    aria-hidden="true"
-                    className="flex size-10 items-center justify-center rounded-full bg-primary font-display font-bold text-primary-foreground"
-                  >
-                    {i + 1}
-                  </span>
-                  <h3 className="mt-2 font-display text-lg font-semibold">
-                    {t(`how.${step}.title`)}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t(`how.${step}.description`)}
-                  </p>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
+          <div className="relative mt-10">
+            <StepFlowLine />
+            <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {(["step1", "step2", "step3", "step4"] as const).map(
+                (step, i) => (
+                  <li key={step}>
+                    <Reveal
+                      delay={i * 0.08}
+                      className="flex h-full flex-col gap-2"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="flex size-10 items-center justify-center rounded-full bg-primary font-display font-bold text-primary-foreground"
+                      >
+                        {i + 1}
+                      </span>
+                      <h3 className="mt-2 font-display text-lg font-semibold">
+                        {t(`how.${step}.title`)}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t(`how.${step}.description`)}
+                      </p>
+                    </Reveal>
+                  </li>
+                ),
+              )}
+            </ol>
+          </div>
           <Reveal delay={0.1}>
             <p className="mt-10 font-display text-lg font-semibold text-primary">
               {t("how.highlight")}
@@ -303,7 +314,7 @@ export default function HomePage({
               {t("finalCta.description")}
             </p>
             <Button
-              className="mt-8 h-11 bg-gold px-6 text-base text-gold-foreground hover:bg-gold/85"
+              className="btn-shimmer mt-8 h-11 bg-gold px-6 text-base text-gold-foreground hover:bg-gold/85"
               render={<Link href="/contact" />}
             >
               {t("finalCta.button")}

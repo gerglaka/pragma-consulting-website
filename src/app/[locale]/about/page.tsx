@@ -77,7 +77,7 @@ export default function AboutPage({
       <div className="mt-14 grid gap-4 sm:grid-cols-3">
         {FACTS.map(({ key, Icon }, i) => (
           <Reveal key={key} delay={i * 0.08}>
-            <div className="h-full rounded-2xl border border-border/70 bg-card p-6 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1">
+            <div className="spotlight h-full rounded-2xl border border-border/70 bg-card p-6 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1">
               <Icon aria-hidden="true" className="size-7 text-primary" />
               <h2 className="mt-3 font-display text-xl font-semibold">
                 {t(`facts.${key}.title`)}
@@ -106,7 +106,7 @@ export default function AboutPage({
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((member, i) => (
             <Reveal key={member.id} delay={i * 0.08}>
-              <article className="h-full overflow-hidden rounded-2xl border border-border/70 bg-card transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1">
+              <article className="spotlight h-full overflow-hidden rounded-2xl border border-border/70 bg-card transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1">
                 {member.photo ? (
                   <Image
                     src={member.photo}
@@ -149,7 +149,7 @@ export default function AboutPage({
           {t("cta.description")}
         </p>
         <Button
-          className="mt-6 h-11 px-6 text-base"
+          className="btn-shimmer mt-6 h-11 px-6 text-base"
           render={<Link href="/contact" />}
         >
           {t("cta.button")}
