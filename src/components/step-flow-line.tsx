@@ -19,11 +19,14 @@ export function StepFlowLine() {
     restDelta: 0.001,
   });
 
+  // Spans from the center of circle 1 (20px in) to the center of circle 4:
+  // the 4th column starts at 75% + 24px (3/4 of the gaps), +20px to its
+  // circle center → right inset = 25% - 44px.
   return (
     <div
       ref={ref}
       aria-hidden="true"
-      className="absolute inset-x-0 top-5 hidden lg:block"
+      className="absolute top-5 left-5 right-[calc(25%-44px)] hidden lg:block"
     >
       <div className="h-px bg-border" />
       <motion.div

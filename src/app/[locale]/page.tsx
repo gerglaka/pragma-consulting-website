@@ -217,7 +217,8 @@ export default function HomePage({
           </Reveal>
           <div className="relative mt-10">
             <StepFlowLine />
-            <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {/* relative so the list paints above the absolutely-positioned line */}
+            <ol className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {(["step1", "step2", "step3", "step4"] as const).map(
                 (step, i) => (
                   <li key={step}>
