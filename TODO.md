@@ -8,8 +8,8 @@ env vars) happen after these — see README.md "Deploying to Vercel".
 - [ ] **Domain** — buy it; needed for `NEXT_PUBLIC_SITE_URL` and Resend
 - [ ] **Team photos** — 3 portraits, ~4:5 ratio (~800×1000px) → `public/team/`
 - [ ] **Team names + roles** — in HU, SK and EN → `aboutPage.team.*` in `messages/*.json`
-- [ ] **Partner logos** — 3 logos, SVG preferred (or ~320×128 PNG/WebP) → `public/partners/`
-- [ ] **Partner names + optional links** → `src/content/partners.ts`
+- [x] **Partner logos** — Palace Café & Bar, World Experience, Šimab, Virtuálne sídlo Komárno (processed → `public/partners/`; originals in `partner_logos/`)
+- [x] **Partner names + optional links** — palacebar.sk, mastersoffice.sk, sidlokomarno.sk; Šimab unlinked
 - [ ] **Reference visuals** (replace the gradient mockups where possible):
   - [ ] Business websites — screenshots of the live sites (with client OK)
   - [ ] Restaurant ordering system — interface screenshot with demo data only

@@ -268,14 +268,19 @@ export default function HomePage({
         <Reveal delay={0.08}>
           <ul className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             {partners.map((partner) => {
+              // Light chip behind each logo so dark logo artwork stays
+              // visible on the dark theme; grayscale until hover.
               const mark = partner.logo ? (
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={160}
-                  height={64}
-                  className="h-12 w-auto opacity-80 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0 sm:h-14"
-                />
+                <span className="group flex h-20 w-40 items-center justify-center rounded-xl border border-border bg-card px-5 transition duration-200 hover:border-primary/40 dark:border-transparent dark:bg-white/90">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={partner.width}
+                    height={partner.height}
+                    unoptimized={partner.logo.endsWith(".svg")}
+                    className="max-h-12 w-auto max-w-full opacity-85 grayscale transition duration-200 group-hover:opacity-100 group-hover:grayscale-0"
+                  />
+                </span>
               ) : (
                 <span className="flex h-14 min-w-36 items-center justify-center rounded-xl border border-dashed border-border bg-card px-6 font-display text-lg font-semibold text-muted-foreground/70">
                   {partner.name}
