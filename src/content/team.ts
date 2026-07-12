@@ -5,7 +5,11 @@ export type TeamMember = {
   photo?: string;
 };
 
-// PLACEHOLDERS — names/roles live in messages/{hu,sk,en}.json under
-// `aboutPage.team.<id>`. To add a member: add an entry here + the message keys.
+// Names/roles live in messages/{hu,sk,en}.json under `aboutPage.team.<id>`.
+// To add a member: add an entry here + the message keys in all three files.
 // To add a photo: put the file in public/team/ and set `photo: "/team/<file>"`.
-export const team: TeamMember[] = [{ id: "m1" }, { id: "m2" }, { id: "m3" }];
+export const team: TeamMember[] = [
+  { id: "gergo" },
+  { id: "daniella" },
+  { id: "levente" },
+];

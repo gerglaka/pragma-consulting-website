@@ -211,17 +211,17 @@
     "team": {
       "title": "Our team",
       "intro": "The people behind Pragma.",
-      "m1": {
-        "name": "Team member name",
-        "role": "Role"
+      "gergo": {
+        "name": "Gergő Lakatos",
+        "role": "Founder & Owner"
       },
-      "m2": {
-        "name": "Team member name",
-        "role": "Role"
+      "daniella": {
+        "name": "Daniella Majer",
+        "role": "Graphic Designer"
       },
-      "m3": {
-        "name": "Team member name",
-        "role": "Role"
+      "levente": {
+        "name": "Levente Keresztes",
+        "role": "Analysis & Processes"
       }
     }
   },

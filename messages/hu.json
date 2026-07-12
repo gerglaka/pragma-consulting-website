@@ -211,17 +211,17 @@
     "team": {
       "title": "Csapatunk",
       "intro": "A Pragma mögött álló emberek.",
-      "m1": {
-        "name": "Csapattag neve",
-        "role": "Pozíció"
+      "gergo": {
+        "name": "Lakatos Gergő",
+        "role": "Alapító, tulajdonos"
       },
-      "m2": {
-        "name": "Csapattag neve",
-        "role": "Pozíció"
+      "daniella": {
+        "name": "Majer Daniella",
+        "role": "Grafikai tervező"
       },
-      "m3": {
-        "name": "Csapattag neve",
-        "role": "Pozíció"
+      "levente": {
+        "name": "Keresztes Levente",
+        "role": "Elemzés és folyamatok"
       }
     }
   },

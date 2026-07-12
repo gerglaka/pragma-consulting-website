@@ -212,17 +212,17 @@
     "team": {
       "title": "Náš tím",
       "intro": "Ľudia, ktorí stoja za značkou Pragma.",
-      "m1": {
-        "name": "Meno člena tímu",
-        "role": "Pozícia"
+      "gergo": {
+        "name": "Gergő Lakatos",
+        "role": "Zakladateľ a majiteľ"
       },
-      "m2": {
-        "name": "Meno člena tímu",
-        "role": "Pozícia"
+      "daniella": {
+        "name": "Daniella Majer",
+        "role": "Grafická dizajnérka"
       },
-      "m3": {
-        "name": "Meno člena tímu",
-        "role": "Pozícia"
+      "levente": {
+        "name": "Levente Keresztes",
+        "role": "Analýza a procesy"
       }
     }
   },
