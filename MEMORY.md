@@ -143,3 +143,9 @@ Decision log. Read at session start. Never contradict an entry without flagging 
 
 - **Decided (Gergő):** team cards show real names with short honest role labels (no invented titles): Lakatos Gergő — "Alapító, tulajdonos" / "Zakladateľ a majiteľ" / "Founder & Owner"; Majer Daniella — "Grafikai tervező" / "Grafická dizajnérka" / "Graphic Designer"; Keresztes Levente — "Elemzés és folyamatok" / "Analýza a procesy" / "Analysis & Processes" (domain-style label chosen because he helps on projects rather than holding a fixed position).
 - **Decided:** name order is localized — HU family-name-first ("Lakatos Gergő"), SK/EN given-name-first ("Gergő Lakatos"). Team ids in `team.ts` are now `gergo`/`daniella`/`levente`. Photos still pending (TODO.md).
+
+## 2026-07-12 — Go-live: Vercel framework:null incident + DNS facts
+
+- **Fact (incident):** first production deploys returned 404 on every app route while `public/` files served fine. Root cause: the Vercel project was created with `framework: null` — `next build` ran, but the deployment was published as a static site (no lambdas). Fix: `vercel.json` with `"framework": "nextjs"` (commit `9768814`); the redeploy shows `lambdaRuntimeStats {"nodejs":3}` and everything serves. Don't remove vercel.json.
+- **Fact (DNS):** pragmaconsulting.sk is registered at Websupport, NS ns1-3.websupport.sk, apex A → 216.198.79.1 (Vercel). Gergő's initial Firefox "Server Not Found" was stale local negative-DNS cache from before the record existed — resolves itself. `www.pragmaconsulting.sk` currently points at 37.9.175.132 (Websupport parking), NOT Vercel — needs a CNAME to `cname.vercel-dns.com` at Websupport + adding the www domain in Vercel if wanted.
+- **Follow-up:** set `NEXT_PUBLIC_SITE_URL=https://pragmaconsulting.sk` in Vercel env (it's baked at build time → redeploy after setting), then Resend vars per TODO.md.
