@@ -114,8 +114,10 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
         <SpotlightEffect />
-        {/* Cookieless page-view analytics (Vercel) — no consent banner needed. */}
-        <Analytics />
+        {/* Cookieless page-view analytics — no consent banner needed. Only on
+            Vercel builds: the /_vercel/insights script doesn't exist on local
+            `next start`, and the 404 would trip the console-error checks. */}
+        {process.env.VERCEL === "1" && <Analytics />}
         <JsonLd
           data={{
             "@context": "https://schema.org",
