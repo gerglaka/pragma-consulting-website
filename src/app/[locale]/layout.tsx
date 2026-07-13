@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import {
   type AbstractIntlMessages,
@@ -113,6 +114,8 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
         <SpotlightEffect />
+        {/* Cookieless page-view analytics (Vercel) — no consent banner needed. */}
+        <Analytics />
         <JsonLd
           data={{
             "@context": "https://schema.org",
