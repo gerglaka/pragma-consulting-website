@@ -244,3 +244,15 @@ body::after {
     animation: none;
   }
 }
+
+/* Pragma logo mark: one SVG (public/pragma-mark.svg) recolored per theme by
+   painting a solid color through the artwork as a mask. */
+.logo-mark {
+  display: inline-block;
+  background-color: #2a3141; /* logo navy (from the brand file) */
+  -webkit-mask: url("/pragma-mark.svg") no-repeat center / contain;
+  mask: url("/pragma-mark.svg") no-repeat center / contain;
+}
+.dark .logo-mark {
+  background-color: #ecedf2; /* dark-theme foreground */
+}
