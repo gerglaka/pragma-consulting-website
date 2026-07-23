@@ -175,7 +175,11 @@ export default function HomePage({
                 href="/references"
                 className="group spotlight block h-full rounded-2xl border border-border/70 bg-card p-4 transition-all duration-200 hover:border-primary/40 hover:shadow-md motion-safe:hover:-translate-y-1"
               >
-                <DeviceFrame gradient={project.gradient} compact />
+                <DeviceFrame
+                  gradient={project.gradient}
+                  image={project.image}
+                  compact
+                />
                 <p className="mt-4 text-xs font-medium tracking-wide text-primary uppercase">
                   {tp(`${project.id}.tag`)}
                 </p>

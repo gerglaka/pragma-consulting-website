@@ -67,6 +67,7 @@ export default function ReferencesPage({
           >
             <DeviceFrame
               gradient={project.gradient}
+              image={project.image}
               className={i % 2 === 1 ? "lg:order-last" : undefined}
             />
             <div>

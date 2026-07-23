@@ -14,23 +14,30 @@ export interface Project {
   id: ProjectId;
   gradient: string;
   url?: string;
+  // Real screenshot under /public. When set, the DeviceFrame shows it instead
+  // of the gradient placeholder. Leave unset until a real screenshot exists.
+  image?: string;
 }
 
 export const projects: Project[] = [
   {
     id: "restaurant",
     gradient: "from-brand-deep via-brand to-[#5b7bc7]",
+    image: "/references/restaurant.png",
   },
   {
     id: "websites",
     gradient: "from-[#24488f] via-brand to-[#7d97d6]",
+    image: "/references/websites.png",
   },
   {
     id: "timetracking",
     gradient: "from-[#122c5e] via-brand-deep to-brand",
+    image: "/references/timetracking.png",
   },
   {
     id: "manufacturing",
     gradient: "from-[#16376f] via-[#2c4c96] to-[#93ace8]",
+    image: "/references/manufacturing.png",
   },
 ];
